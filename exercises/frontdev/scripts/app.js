@@ -30,7 +30,7 @@ var employeesList = [
     }
 ];
 function showList() {
-    var myTable = '<table border="1" class="http://getbootstrap.com/css/#tables"><tr><th>First Name</th><th>Last Name</th><th>Phone</th><th>Salary</th></tr>';
+    var myTable = '<table border="1" class="table table-striped"><tr><th>First Name</th><th>Last Name</th><th>Phone</th><th>Salary</th></tr>';
     for(var i in employeesList) {
         myTable +=
             '<tr><td>'+employeesList[i].firstName+'</td><td>'+employeesList[i].lastName+'</td>' +
@@ -52,7 +52,7 @@ function addEmployee() {
     var phone = document.getElementById("phone").value;
     var salary = document.getElementById("salary").value;
     employeesList.push(new Employee(firstName, lastName, phone,salary));
-    var myTable = '<table border="1"><tr><th>First Name</th><th>Last Name</th><th>Phone</th><th>Salary</th></tr>';
+    var myTable = '<table border="1" class="table table-striped"><tr><th>First Name</th><th>Last Name</th><th>Phone</th><th>Salary</th></tr>';
     for(var i in employeesList) {
         myTable +=
             '<tr><td>'+employeesList[i].firstName+'</td><td>'+employeesList[i].lastName+'</td>' +
@@ -70,7 +70,7 @@ function salarytotal() {
     for(var i in employeesList){
         total+=parseInt(employeesList[i].salary);
     }
-    var myTable = '<table border="1"><tr><th></th></th>';
+    var myTable = '<table border="1" ><tr><th></th></th>';
         myTable +=total;
     myTable += '</table>';
     var container = document.getElementById('listcontainer');
@@ -79,7 +79,7 @@ function salarytotal() {
 
 function Delete(){
     employeesList.pop();
-    var myTable = '<table border="1"><tr><th>First Name</th><th>Last Name</th><th>Phone</th><th>Salary</th></tr>';
+    var myTable = '<table border="1" class="table table-striped"><tr><th>First Name</th><th>Last Name</th><th>Phone</th><th>Salary</th></tr>';
     for(var i in employeesList) {
         myTable +=
             '<tr><td>'+employeesList[i].firstName+'</td><td>'+employeesList[i].lastName+'</td>' +
