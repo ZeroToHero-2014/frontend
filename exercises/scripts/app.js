@@ -31,7 +31,7 @@ var employeesList = [
     }
 ];
 function showList() {
-    var myTable = '<table border="1"><tr><th>First Name</th><th>Last Name</th><th>Phone</th><th>Salary</th></tr>';
+    var myTable = '<table class="table table-condensed" border="1"><tr><th>First Name</th><th>Last Name</th><th>Phone</th><th>Salary</th></tr>';
     for(var i in employeesList) {
         myTable += '<tr><td>'+employeesList[i].firstName+'</td><td>'+employeesList[i].lastName+'</td><td>'+employeesList[i].phone+'</td><td>'+employeesList[i].salary+'</td></tr>';
     }
@@ -55,6 +55,11 @@ function sum(){
     container_sum.innerHTML = s;
 
     }
+
+function deleteLast(){
+    employeesList.pop();
+    showList();
+}
 function addEmployee() {
     var firstName = document.getElementById("firstName").value;
     var lastName = document.getElementById("lastName").value;
