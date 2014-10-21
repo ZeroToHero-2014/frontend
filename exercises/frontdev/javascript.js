@@ -41,7 +41,7 @@ var employeesList = [
 ];
 
 function showList() {
-    var myTable = '<table border="1"  style="margin:0 auto"><tr><th>First Name</th><th>Last Name</th><th>Phone</th><th>Salary</th><th>Salary Total</th></tr>';
+    var myTable = '<table border="1"  style="margin:0 auto"><tr><th>First Name</th><th>Last Name</th><th>Phone</th><th>Salary</th></tr>';
     for(var i in employeesList) {
         var sum = 0;
         myTable +=
@@ -49,12 +49,6 @@ function showList() {
             '   <td>'+employeesList[i].firstName+'</td>' +
                 '<td>'+employeesList[i].lastName+'</td><td>'+employeesList[i].phone+'</td>' +
                 '<td>'+employeesList[i].salary+'</td>' +
-                '<td>'
-        if(!isNaN(this.salary) && this.innerHTML.length!=0) {
-            sum += parseFloat(this.innerHTML);
-        }
-        sum
-        '</td>'
             '</tr>';
 
     }
@@ -75,3 +69,15 @@ function addEmployee() {
     employeesList.push(new Employee(firstName, lastName, phone, salary));
 }
 
+function sum(){
+    var sum = 0;
+    for(var i in employeesList){
+      sum += employeesList[i].salary;
+    }
+    var container = document.getElementById('sumaTotal');
+    container.innerText = +sum;
+}
+
+function delete(){
+    employeesList.pop();
+}
