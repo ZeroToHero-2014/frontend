@@ -67,5 +67,5 @@ function functie() {
 
 
 function sterge(){
-    
+  employeesList.pop();
 }
