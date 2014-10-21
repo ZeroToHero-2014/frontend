@@ -57,4 +57,18 @@ function addEmployee() {
     showList()
 }
 
-function showSum()
+function salarySum() {
+    var sum = 0;
+    for (var i in employeesList) {
+        sum += employeesList[i].salary;
+    }
+    var container = document.getElementById('sumasalariucontainer');
+    var sumasalariu = '<p>' + sum + '</p>';
+    container.innerHTML = sumasalariu;
+}
+
+function deleteEmployee()
+{
+    employeesList.pop();
+    showList();
+}
