@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="main.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <title>Demo HR</title>
+    <style type="text/css">
+        h1 {
+            color:#0000FF;
+        }
+    </style>
+
+</head>
+<body>
+<h1  style="text-align: center">HR Employees List Page</h1>
+<div class="panel panel-default">
+    <div class="panel-heading description">
+        Employees list
+    </div>
+    <div class="panel-body">
+        <div>
+            <p>
+                <button class="btn btn-default" id="btt" onclick="showList()">Show List</button>
+            </p>
+        </div>
+        <div id="listcontainer">
+
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading description">
+        Add employee
+    </div>
+    <div class="panel-body">
+        <p>
+            First Name: <input class="form-control" type="text" id="firstName"/>
+        </p>
+        <p>
+            Last Name: <input class="form-control" type="text" id="lastName"/>
+        </p>
+        <p style="padding-rightt: 0px;">
+            Phone: <input class="form-control" type="text" id="phone"/>
+        </p>
+        <p style="padding-right: 0px;">
+            Salary: <input class="form-control" type="number" id="salary"/>
+        </p>
+        <p>
+            <button class="btn btn-default" onclick="addEmployee();refresh();">Add employee</button>
+        </p>
+    </div>
+</div>
+<div style="text-align: center">
+    <button class="btn btn-default" id="sumaTotal" onclick="sum();">Total Sum</button>
+    <button class="btn btn-default" id="delete" onclick="employeesList.pop();refresh();">Delete Last Employee</button>
+</div>
+<div  style="text-align: center">
+    <a href="index.html">Back to Home Page</a>
+</div>
+
+<script src="javascript.js"></script>
+</body>
+</html>
