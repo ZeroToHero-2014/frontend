@@ -16,8 +16,16 @@
     <div class="panel-body">
         <div>
             <p>
-                <button onclick="showList()">Show List</button>
-                <button onclick="SalaryTotal()">Salary Total</button>
+                <table class="buttons">
+                    <tr>
+                        <td><button onclick="showList()">Show List</button> </td>
+                        <td><button onclick="hideList()">Hide List</button> </td>
+                    </tr>
+                    <tr>
+                        <td><button onclick="SalaryTotal()">Salary Total</button></td>
+                        <td><button onclick="OrderBySalary()">Order employees</button></td>
+                    </tr>
+                </table>
             </p>
         </div>
         <div id="listcontainer">
