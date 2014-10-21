@@ -70,5 +70,5 @@ function salaryTotal() {
 }
 
 function deleteEmployee() {
-    delete employeesList[employeesList.length -1];
+   employeesList.pop();
 }
