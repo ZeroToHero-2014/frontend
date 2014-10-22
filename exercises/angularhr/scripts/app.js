@@ -7,8 +7,8 @@ hrApp.config(['$routeProvider',
     function($routeProvider) {
         $routeProvider
             .when('/contactus', {    //intra pe orice ruta, daca nu gaseste vreuna definita
-                templateUrl: 'templates/contact.html' //va fi incarcat in ng-view
-                //controller: 'ContactController'
+                templateUrl: 'templates/contact.html', //va fi incarcat in ng-view
+                controller: 'ContactController'
             })
             .otherwise({    //intra pe orice ruta, daca nu gaseste vreuna definita
                 templateUrl: 'templates/main.html', //va fi incarcat in ng-view

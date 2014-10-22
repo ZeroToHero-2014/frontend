@@ -11,7 +11,8 @@
 </head>
 <body>
     <div ng-include="'templates/menu.html'"></div>
-    <div ng-view></div> <!--unde va fi incarcata directiva//creeaza un alt scop copil al lui $scope-->
+    <!--unde va fi incarcata directiva//creeaza un alt scop copil al lui $scope-->
+    <div ng-view></div>
 
     <!--libraria jquery pt angular-->
     <script type="text/javascript" src="bower_components/jquery/jquery.js"></script>
@@ -19,6 +20,8 @@
     <script type="text/javascript" src="bower_components/angular/angular.js"></script>
     <script type="text/javascript" src="bower_components/angular-resource/angular-resource.js"></script>
     <script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+
+    <!--incarcam scripturi aplicatie-->
     <script type="text/javascript" src="scripts/app.js"></script>
     <script type="text/javascript" src="scripts/controllers/MainController.js"></script>
     <script type="text/javascript" src="scripts/controllers/MenuController.js"></script>

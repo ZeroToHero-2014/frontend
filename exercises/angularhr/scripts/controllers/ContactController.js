@@ -3,6 +3,7 @@
  */
 hrApp.controller('ContactController', ['$scope', function($scope) {
     $scope.title = 'HR Contact';
+    $scope.descriptionShow = true;
     $scope.currentDate = new Date();
 
     $scope.toggleDescriptionShow = function() {
@@ -11,5 +12,5 @@ hrApp.controller('ContactController', ['$scope', function($scope) {
         } else {
             $scope.descriptionShow = true;
         }
-    }
+    };
 }]);
