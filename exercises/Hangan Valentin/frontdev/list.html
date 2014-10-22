@@ -23,20 +23,38 @@
 
         </div>
     </div>
-    <div class="panel-body">
-        <div>
-            <p>
-                <button onclick="showList()">Salary total</button>
-            </p>
-        </div>
-        <div id="">
 
+
+        <div class="panel-heading description">
+            Show sum button
         </div>
-    </div>
+        <div class="panel-body">
+            <div>
+                <p>
+                    <button onclick="salarySum()">Salary total</button>
+                </p>
+            </div>
+            <div id="sumasalariucontainer">
+            </div>
+        </div>
+
+
+
+        <div class="panel-heading description">
+            Delete last employee
+        </div>
+        <div class="panel-body">
+            <div>
+                <p>
+                    <button onclick="deleteEmployee()">Delete Employee</button>
+                </p>
+            </div>
+            <div id="delete">
+            </div>
+        </div>
+
 </div>
-<div>
-    <a href="index.html">Back to Home Page</a>
-</div>
+
 <div class="panel panel-default">
     <div class="panel-heading description">
         Add employee
@@ -58,6 +76,9 @@
             <button onclick="addEmployee()">Add employee</button>
         </p>
     </div>
+</div>
+<div>
+    <a href="index.html">Back to Home Page</a>
 </div>
 
 </body>
