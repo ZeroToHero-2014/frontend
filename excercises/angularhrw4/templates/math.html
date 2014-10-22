@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div class="container">
+    <div class="jumbotron">
+        <h1>{{title}}</h1>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Addition, Subtraction, Multiplication, Division</h3>
+            </div>
+            <div class="panel-body">
+                <p>
+                    Number A: <input type="number" ng-model="firstVariable"/>
+                </p>
+                <p>
+                    Number B: <input type="number" ng-model="secondVariable"/>
+                </p>
+                <p>
+                    Addition = {{firstVariable + secondVariable}}
+                </p>
+                <p>
+                    Substraction = {{firstVariable - secondVariable}}
+                </p>
+                <p>
+                    Multiplication = {{firstVariable * secondVariable}}
+                </p>
+                <p>
+                    Division = {{firstVariable / secondVariable}}
+                </p>
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+</body>
+</html>
