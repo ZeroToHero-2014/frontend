@@ -1,0 +1,18 @@
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>City</th>
+    </tr>
+    <tr ng-repeat="department in departments">
+        <td>
+            {{department.departmentId}}
+        </td>
+        <td>
+            {{department.departmentName}}
+        </td>
+        <td>
+            {{department.locationId.city}}
+        </td>
+    </tr>
+</table>

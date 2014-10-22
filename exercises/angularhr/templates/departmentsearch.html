@@ -1,0 +1,32 @@
+<div class="container">
+<h1>{{title}}</h1>
+<div class="panel-body">
+    <p>
+        Department ID : <input type="text" ng-model="firstVariable"/>
+    </p>
+    <p>
+        <a class="btn btn-primary btn-lg" role="button" ng-click="search()">Search</a>
+    </p>
+</div>
+
+
+
+<table class="table table-bordered" ng-show="descriptionShow">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>City</th>
+    </tr>
+    <tr ng-repeat="department in departments">
+        <td>
+            {{department.departmentId}}
+        </td>
+        <td>
+            {{department.departmentName}}
+        </td>
+        <td>
+            {{department.locationId.city}}
+        </td>
+    </tr>
+</table>
+</div>
