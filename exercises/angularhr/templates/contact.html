@@ -1,10 +1,11 @@
 <div class="container">
-    <div class="jumbotron" ng-hide="descriptionShow">
-        <h1>{{title}}</h1>
-        <p class="lead">
-            Contact la 021 333 333 33
-        </p>
-    </div>
+    <h1>{{heading}}</h1>
+    <div class="jumbotron" ng-show="descriptionShow">
+    <p class="description">
+        {{description}}
+    </p>
+        </div>
+
     <p>
         <a class="btn btn-primary btn-lg" role="button" ng-click="toggleDescriptionShow()">Show/Hide Description</a>
     </p>

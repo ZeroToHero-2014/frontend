@@ -2,13 +2,9 @@ var hrApp = angular.module('hrApp', ['ngRoute', 'ngResource']);
 hrApp.config(['$routeProvider',
     function($routeProvider) {
         $routeProvider
-            .when('/twowaybinding', {
-                templateUrl: 'templates/scopes.html',
-                controller: 'ScopesController'
-            })
-            .when('/contactus',{
+            .when('/contact',{
                 templateUrl: 'templates/contact.html',
-                controller: 'contactusController'
+                controller: 'ContactController'
             })
             .otherwise({
                 templateUrl: 'templates/main.html',
