@@ -5,11 +5,12 @@ hrApp.controller('DepartmentSearchController', ['$scope', '$http', function($sco
     $scope.title = 'Search department!';
     $scope.makeRequest = function() {
         $scope.rezultat = [];
-        $http = ({url: 'http://demo.teamnet.ro:8282/datamodel/departments/findOne/{inputvalue}', method: GET}).
+        $http({url: 'http://demo.teamnet.ro:8282/datamodel/departments/findOne/{inputvalue}', method: 'GET'}).
             success(function(data, status, headers, config) {
-                $scope.departments = data;
+                $scope.rezultat = data;
             }).
             error(function(data, status, headers, config) {
+                $scope.rezultat = status;
             });
     };
 }]);

@@ -19,6 +19,13 @@
                     <p>
                         <a class="btn btn-primary btn-lg" role="button" ng-click="makeRequest()">Search Department By Id</a>
                     </p>
+                    <p>
+                        {{inputvalue}}
+                    </p>
+                    <p ng-repeat="rez in rezultat">
+                        {{rez.departmentName}}
+                        {{rez.error}}
+                    </p>
                 </div>
             </p>
         </div>
