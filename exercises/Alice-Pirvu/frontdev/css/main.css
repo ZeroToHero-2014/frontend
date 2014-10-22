@@ -1,0 +1,35 @@
+.description {
+    text-align: center;
+    color: #330099;
+    font-family: Tahoma;
+    font-size: 16;
+}
+
+.list tr:nth-child(2n+1)
+{
+    background-color: mediumslateblue;
+}
+
+.list tr:nth-child(2n)
+{
+    background-color: aliceblue;
+}
+
+#total
+{
+    background-color: darkblue;
+    color: aliceblue;
+    font-family: Lucida Bright;
+    font-weight: bold;
+}
+
+#total td{
+    text-align: center;
+}
+
+.buttons
+{
+    color: darkred;
+    border-spacing: 10px;
+    border-collapse: separate;
+}
