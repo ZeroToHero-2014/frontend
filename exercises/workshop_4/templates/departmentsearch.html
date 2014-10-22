@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="jumbotron">
+
+        <p>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">First Example</h3>
+            </div>
+            <div class="panel-body">
+
+                <p>
+                    Search by Department ID:<input type="number" ng-model="inputValue"/>
+                </p>
+                <p>
+                    <a class="btn btn-primary btn-lg" role="button" ng-click="getID()">
+                        Search
+                    </a>
+
+
+
+            </div>
+        </div>
+
+        </p>
+    </div>
+</div>
+
+<table class="table table-bordered" ng-show="temp">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>City</th>
+    </tr>
+    <tr >
+        <td>
+            {{departments.departmentId}}
+        </td>
+        <td>
+            {{departments.departmentName}}
+        </td>
+        <td>
+            {{departments.locationId.city}}
+        </td>
+    </tr>
+</table>
+
+
+<h1 ng-show="tempo" style="text-align:center">
+    ERROR
+
+    <p>
+    The results could not be displayed.
+    </p>
+
+</h1>
