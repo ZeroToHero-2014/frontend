@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div class="container">
+    <div class="jumbotron">
+        <h1>{{title}}</h1>
+        <p>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Introduceti numerele:</h3>
+            </div>
+            <div class="panel-body">
+                <p>
+                    Number A: <input type="text" ng-model="VarA"/>
+                </p>
+                <p>
+                    Number B: <input type="text" ng-model="VarB"/>
+                </p>
+                <p>
+                    <a class="btn btn-primary btn-lg" role="button" ng-click="resetVarA()">Reset A</a>
+                    <a class="btn btn-primary btn-lg" role="button" ng-click="resetVarB()">Reset B</a>
+                </p>
+                <p>
+                    A+B={{parseInt(VarA) + parseInt(VarB)}}
+                </p>
+                <p>
+                    A-B={{parseInt(VarA) - parseInt(VarB)}}
+                </p>
+                <p>
+                    A*B={{parseInt(VarA) * parseInt(VarB)}}
+                </p>
+                <p>
+                    A/B={{parseInt(VarA) / parseInt(VarB)}}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
