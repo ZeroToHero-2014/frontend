@@ -10,6 +10,10 @@ hrApp.config(['$routeProvider',
                 templateUrl: 'templates/contact.html', //va fi incarcat in ng-view
                 controller: 'ContactController'
             })
+            .when('/twowaybinding', {
+                templateUrl: 'templates/scopes.html',
+                controller: 'ScopesController'
+            })
             .otherwise({    //intra pe orice ruta, daca nu gaseste vreuna definita
                 templateUrl: 'templates/main.html', //va fi incarcat in ng-view
                 controller: 'MainController'
