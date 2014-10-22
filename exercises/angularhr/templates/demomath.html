@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="jumbotron" >
+        <h1>{{title}}</h1>
+        <p class="lead">
+          Number A  <input type="text" ng-model="a_number"/>
+          Number B <input type="text" ng-model="b_number"/>
+        </p>
+        <p class="lead">Addition:{{a_number -- b_number}}</p>
+        <p class="lead">Subtraction:{{x2}}</p>
+        <p class="lead">Multiplication:{{a_number * b_number}}</p>
+        <p class="lead">Division:{{a_number / b_number}}</p>
+    </div>
+
+    <p><a class="btn btn-primary btn-lg" role="button" ng-click="toggleDescriptionShow()">Show/Hide Description</a></p>
+</div>
