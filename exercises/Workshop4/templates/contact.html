@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron" ng-show="descriptionShow">
+            <h1 class="lead">
+                {{title}}
+            </h1>
+            <p class="lead">
+                You can contact us at bla@gmail.com.
+            </p>
+            <p class="lead">
+                Or call every day from 8 to 19 at: 112233.
+            </p>
+        </div>
+        <p>
+            <a class="btn btn-primary btn-lg" role="button" ng-click="toggleDescriptionShow()">Show/Hide Description</a>
+        </p>
+    </div>
+</body>
+</html>
