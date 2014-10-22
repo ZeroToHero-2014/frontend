@@ -10,7 +10,7 @@ hrApp.controller('MenuController',['$scope',function($scope){
             url: "#/towaybinding"
         },
         {
-            label: "Eu",
+            label: "Demo Math",
             url: "#/demomath"
         }
     ];

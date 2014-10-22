@@ -5,6 +5,10 @@ var hrApp = angular.module('hrApp',['ngRoute','ngResource']);
 
 hrApp.config(['$routeProvider',function($routeProvider){
     $routeProvider
+        .when('/demomath',{
+            templateUrl: 'templates/demomath.html',
+            controller: 'DemoMathController'
+        })
         .when('/towaybinding',{
             templateUrl:'templates/scopes.html',
             controller: 'ScopeController'

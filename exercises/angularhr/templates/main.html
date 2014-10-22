@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="jumbotron" ng-show="descriptionShow">
+    <div class="jumbotron" ng-hide="descriptionShow">
         <h1>{{title}}</h1>
         <p class="lead">A simple demo application</p>
         <p class="lead">
@@ -7,5 +7,5 @@
         </p>
 
     </div>
-    <a class="btn btn-primary btn-lg" role="button" ng-show="" ">Show/Hide Description</a>
+    <a class="btn btn-primary btn-lg" role="button" ng-click="toggleDescriptionShow()" ">Show/Hide Description</a>
 </div>

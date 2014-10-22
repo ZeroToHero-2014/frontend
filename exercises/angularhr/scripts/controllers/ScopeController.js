@@ -4,7 +4,7 @@
 hrApp.controller('ScopeController',['$scope', function($scope){
     $scope.title='Two Way Binding Demo';
     $scope.childtemplate='templates/childscope.html';
-    $scope.resetFirestVariable=function(){
+    $scope.resetFirstVariable=function(){
         $scope.firstVariable = undefined;
     };
     $scope.setFirstVariable = function(val){
