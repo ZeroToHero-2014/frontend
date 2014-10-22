@@ -68,4 +68,7 @@ function functie() {
 
 function sterge(){
   employeesList.pop();
+  showList();
+  functie();
+
 }
