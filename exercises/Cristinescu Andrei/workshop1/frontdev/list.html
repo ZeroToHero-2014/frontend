@@ -18,29 +18,35 @@
                 <p>
                     <button onclick="showList()">Show List</button>
                 </p>
-                <p><button onclick="addEmployee()">Back to add employee</button> </p>
+                <p><button onclick="sum()" class="SumB">Sum</button><p class="SumB"></p>
+                <p><button onclick="remove()" class="SumB">Remove last entry</button><p id="SumB"></p>
             </div>
             <div id ="listcontainer">
-                <div class = "panel-body">
-                    <p>
-                        First Name: <input type="text" id = "firstName"/>
-                    </p>
-                    <p>
-                        Last Name: <input type="text" id = "lastName"/>
-                    </p>
-                    <p>
-                        Phone: <input type="text" id="phone"/>
-                    </p>
-                    <p>
-                        Salary: <input type="number" id="salary"/>
-                    </p>
-                    <p>
-                        <button onclick="addEmployee()">Add employee</button>
-                    </p>
-                </div>
+
             </div>
         </div>
     </div>
+    <div class="panel panel-default">
+        <div class="panel-heading description">
+            Add employee
+        </div>
+        <div class="panel-body">
+            <p>
+                First Name: <input type="text" id="firstName"/>
+            </p>
+            <p>
+                Last Name: <input type="text" id="lastName"/>
+            </p>
+            <p>
+                Phone: <input type="text" id="phone"/>
+            </p>
+            <p>
+                Salary: <input type="number" id="salary"/>
+            </p>
+            <p>
+                <button onclick="addEmployee()">Add employee</button>
+            </p>
+        </div>
     <div>
         <a href = "index.html">Back to Home</a>
     </div>
