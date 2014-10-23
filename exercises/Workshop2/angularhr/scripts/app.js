@@ -17,6 +17,14 @@ hrApp.config(['$routeProvider', function($routeProvider) {
             templateUrl: 'templates/demomath.html',
             controller: 'MathController'
         })
+        .when('/departmentslist', {
+            templateUrl: 'templates/departmentslist.html',
+            controller: 'DepartmentsListController'
+        })
+        .when('/departmentsearch', {
+            templateUrl: 'templates/departmentsearch.html',
+            controller: 'DepartmentSearch'
+        })
         .otherwise({
             templateUrl: 'templates/main.html',
             controller: 'MainController'
