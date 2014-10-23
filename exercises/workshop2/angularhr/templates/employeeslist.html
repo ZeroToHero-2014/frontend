@@ -1,0 +1,56 @@
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Salary</th>
+        <th>Department Name</th>
+        <th>Actions</th>
+    </tr>
+    <tr ng-repeat="employee in employees">
+        <td>
+            {{employee.employeeId}}
+        </td>
+        <td>
+            {{employee.firstName}}
+        </td>
+        <td>
+            {{employee.lastName}}
+        </td>
+        <td>
+            {{employee.salary}}
+        </td>
+        <td>
+            {{employee.departmentId.departmentName}}
+        </td>
+        <td>
+            <button class="btn btn-default" ng-click="searchEmployeeById(employee.employeeId)">Search employee</button>
+        </td>
+    </tr>
+</table>
+<div ng-show="searchResultShow">
+    <p>
+        ID: {{employee.employeeId}}
+    </p>
+    <p>
+        First Name: {{employee.firstName}}
+    </p>
+    <p>
+        Last Name: {{employee.lastName}}
+    </p>
+    <p>
+        Salary: {{employee.salary}}
+    </p>
+    <p>
+        Department Name: {{employee.departmentId.departmentName}}
+    </p>
+    <p>
+        Email: {{employee.email}}
+    </p>
+    <p>
+        Phone Number:  {{employee.phoneNumber}}
+    </p>
+    <p>
+        Department city:  {{employee.departmentId.locationId.city}}
+    </p>
+</div>
