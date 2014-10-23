@@ -3,17 +3,34 @@
  */
 hrApp.controller('DepartmentSearch', ['$scope', '$http', function($scope, $http){
     $scope.title = 'Department Search';
-    $scope.resetFirstVariable = function() {
+    $scope.departments = "";
+    $scope.firstVariable = "";
+    $scope.error2 = false;
+    /*$scope.resetFirstVariable = function() {
         $scope.firstVariable = undefined;
     };
     $scope.setFirstVariable = function(val) {
         $scope.firstVariable = val;
-    };
-    $scope.departments = [];
-    $http({url: 'http://demo.teamnet.ro:8282/datamodel/departments/findAll', method: 'GET'}).
-        success(function(data, status, headers, config) {
-            $scope.departments = data;
-        }).
-        error(function(data, status, headers, config) {
-        });
+    };*/
+
+    $scope.search = function(){
+        $http({url: 'http://demo.teamnet.ro:8282/datamodel/departments/findOne/' + $scope.firstVariable, method: 'GET'}).
+            success(function(data, status, headers, config) {
+                $scope.department = data;
+                $scope.visible = true;
+                if(data == "null")
+                {
+                    $scope.error2 = true;
+                    $scope.visible = false;
+                }
+                else
+                {
+                    $scope.error2 = false;
+                }
+            }).
+            error(function(data, status, headers, config) {
+                $scope.visible = false;
+                $scope.error2 = true;
+            })
+    }
 }]);

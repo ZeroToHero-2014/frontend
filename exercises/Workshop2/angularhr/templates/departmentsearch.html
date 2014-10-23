@@ -9,18 +9,35 @@
             <div class="panel-body">
 
                 <p>
-                    Name to serch: <input type="text" ng-model="firstVariable"/>
+                    Name to serch: <input type="number" ng-model="firstVariable"/><h2 ng-show = "error2">ERROR </h2>
                 </p>
                 <p>
                     Your input: {{firstVariable}}
                 </p>
                 <p>
-                    <a class="btn btn-primary btn-lg" role="button" ng-click="resetFirstVariable()">Reset Input</a>
+                    <button class="btn btn-primary btn-lg"  ng-click="search()">Search</button>
                 </p>
 
             </div>
         </div>
-
+        <table class="table table-bordered" ng-show="visible">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>City</th>
+            </tr>
+            <tr >
+                <td>
+                    {{department.departmentId}}
+                </td>
+                <td>
+                    {{department.departmentName}}
+                </td>
+                <td>
+                    {{department.locationId.city}}
+                </td>
+            </tr>
+        </table>
         </p>
     </div>
 </div>
