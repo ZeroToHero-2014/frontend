@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="jumbotron">
+        <h1>{{title}}</h1>
+        <p>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">First Example</h3>
+            </div>
+            <div class="panel-body">
+                <p>
+                    First Variable: <input type="number" ng-model="firstVariable"/>
+                </p>
+
+                <p>
+                    Second Variable: <input type="number" ng-model="secondVariable"/>
+                </p>
+
+                <p>
+                    <a class="btn btn-primary btn-lg" role="button" ng-click="resetVariables()">Reset Input</a>
+                </p>
+
+                <p>
+                    <a class="btn btn-primary btn-lg" role="button" ng-click="calculate()">Calculate</a>
+                </p>
+                <p>
+                    sum: {{sum}}
+                </p>
+                <p>
+                    subtraction: {{sub}}
+                </p>
+                <p>
+                    multiplication: {{mult}}
+                </p>
+                <p>
+                    division: {{div}}
+                </p>
+            </div>
+        </div>
+        </p>
+    </div>
+</div>
