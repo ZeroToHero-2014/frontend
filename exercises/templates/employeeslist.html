@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Salary</th>
+        <th>Department Name</th>
+    </tr>
+    <tr ng-repeat="controller in employee">
+        <td>
+            {{controller.employeeId}}
+        </td>
+        <td>
+            {{controller.firstName}} </td>
+        <td>
+            {{controller.lastName}}
+        </td>
+        <td>
+            {{controller.salary}}
+        </td>
+        <td>
+            {{controller.departmentId.departmentName}}
+        </td>
+    </tr>
+</table>
+</body>
+</html>
