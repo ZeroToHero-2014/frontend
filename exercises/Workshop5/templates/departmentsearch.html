@@ -17,15 +17,12 @@
                     </div>
                     <input type="text" ng-model="inputvalue"/>
                     <p>
-                        <a class="btn btn-primary btn-lg" role="button" ng-click="makeRequest()">Search Department By Id</a>
+                        <a class="btn btn-primary btn-lg" role="button" ng-click="makeRequest(inputvalue)">Search Department By Id</a>
                     </p>
                     <p>
-                        {{inputvalue}}
+                        {{rezultat.departmentName}}
                     </p>
-                    <p ng-repeat="rez in rezultat">
-                        {{rez.departmentName}}
-                        {{rez.error}}
-                    </p>
+                    {{eroare}}
                 </div>
             </p>
         </div>

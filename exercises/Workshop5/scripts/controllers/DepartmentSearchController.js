@@ -3,14 +3,14 @@
  */
 hrApp.controller('DepartmentSearchController', ['$scope', '$http', function($scope, $http) {
     $scope.title = 'Search department!';
-    $scope.makeRequest = function() {
+    $scope.makeRequest = function(value) {
         $scope.rezultat = [];
-        $http({url: 'http://demo.teamnet.ro:8282/datamodel/departments/findOne/{inputvalue}', method: 'GET'}).
+        $http({url: 'http://demo.teamnet.ro:8282/datamodel/departments/findOne/'+value, method: 'GET'}).
             success(function(data, status, headers, config) {
                 $scope.rezultat = data;
             }).
             error(function(data, status, headers, config) {
-                $scope.rezultat = status;
+                $scope.eroare = status;
             });
     };
 }]);
