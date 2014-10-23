@@ -1,6 +1,3 @@
-/**
- * Created by TheBeastMaster on 23/10/2014.
- */
 hrApp.factory('employeeActionsService', function() {
     var employeeActionList = [
         {
@@ -12,8 +9,8 @@ hrApp.factory('employeeActionsService', function() {
             url: "#/employeeadd"
         },
         {
-            label:"Search employee",
-            url:"#/employeesearch"
+            label: "View Employee",
+            url: "#/employeeview"
         }
     ];
     return employeeActionList;

@@ -19,6 +19,6 @@ hrApp.controller('MenuController',['$scope', 'employeeActionsService' ,function(
         }
     ];
 
-    $scope.employeeList = employeeActionsService;
+    $scope.ActionList=employeeActionsService;
 
 }]);
