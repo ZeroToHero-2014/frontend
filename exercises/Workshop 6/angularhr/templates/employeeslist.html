@@ -12,6 +12,7 @@
         <th>Last Name</th>
         <th>Salary</th>
         <th>Department Name</th>
+        <th>Action</th>
     </tr>
     <tr ng-repeat="employee in employees">
         <td>
@@ -29,7 +30,18 @@
         <td>
             {{employee.departmentId.departmentName}}
         </td>
+        <td>
+            <a class="btn btn-primary btn-lg" role="button" ng-click="cauta(employee.employeeId)">Details</a>
+        </td>
     </tr>
 </table>
+<p>Id:{{details.employeeId}}</p>
+<p>First Name:{{details.firstName}}</p>
+<p>Last Name:{{details.lastName}}</p>
+<p>Salary:{{details.salary}}</p>
+<p>Department Name:{{details.departmentId.departmentName}}</p>
+<p>Department Location:{{details.departmentId.locationId.city}}</p>
+<p>E-mail:{{details.email}}</p>
+<p>Phone Number{{details.phoneNumber}}</p>
 </body>
 </html>
