@@ -1,0 +1,33 @@
+
+<table class="table" ><tr><td>{{employe.employeeId}}</td><td>{{employe.firstName}}</td><td>{{employe.lastName}}</td>
+    <td>{{employe.salary}}</td><td>{{employe.departmentName}}</td><td>{{employe.email}}</td><td>{{employe.phoneNumber}}</td>
+    <td>{{employe.locationId.city}}</td></tr></table>
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Salary</th>
+        <th>Department Name</th>
+        <th>Actions</th>
+    </tr>
+    <tr ng-repeat="employee in employees">
+        <td>
+            {{employee.employeeId}}
+        </td>
+        <td>
+            {{employee.firstName}} </td>
+        <td>
+            {{employee.lastName}}
+        </td>
+        <td>
+            {{employee.salary}}
+        </td>
+        <td>
+            {{employee.departmentId.departmentName}}
+        </td>
+        <td><input type="button" value="Action" ng-click="afis(employee.employeeId)"></td>
+    </tr>
+</table>

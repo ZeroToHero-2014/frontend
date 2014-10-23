@@ -1,0 +1,6 @@
+<select ng-model="myemp" ng-options="employe.firstName for employe in employees">
+    <option value="">-- select --</option>
+</select>
+        <table  class="table"><tr><td>{{myemp.firstName}}</td><td>{{myemp.lastName}}</td><td>{{myemp.departmentId.departmentName}}</td><td>{{myemp.salary}}</td></tr></table>
+
+
