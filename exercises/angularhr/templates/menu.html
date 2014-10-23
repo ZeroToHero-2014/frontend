@@ -22,6 +22,13 @@
                 </li>
                 <li><a href="#/departmentslist">Departments List</a></li>
                 <li><a href="#/departmentsearch">Departments Search</a></li>
+
+                <li class="dropdown">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown">Employees<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li ng-repeat="action in actionList"><a href="{{action.url}}">{{action.label}}</a></li>
+                    </ul>
+                </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a>Date: {{currentDate | date:'dd-MM-yyyy'}}</a></li>
