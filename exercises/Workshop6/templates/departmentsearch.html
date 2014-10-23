@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>
+               {{title}}
+            </h1>
+            <p>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Try it!</h3>
+                    </div>
+                    <input type="text" ng-model="inputvalue"/>
+                    <p>
+                        <a class="btn btn-primary btn-lg" role="button" ng-click="makeRequest(inputvalue)">Search Department By Id</a>
+                    </p>
+                    <p>
+                        {{rezultat.departmentName}}
+                        {{eroare}}
+                    </p>
+                </div>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

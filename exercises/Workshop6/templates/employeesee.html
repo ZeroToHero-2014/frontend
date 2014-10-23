@@ -1,0 +1,20 @@
+    <div class="container">
+        <select ng-options="nume.firstName for nume in employees" ng-model="singleEmployee">
+
+        </select>
+        <p>
+            ID: {{singleEmployee.employeeId}}
+        </p>
+        <p>
+            First name: {{singleEmployee.firstName}}
+        </p>
+        <p>
+            Last name: {{singleEmployee.lastName}}
+        </p>
+        <p>
+            Salary: {{singleEmployee.salary}}
+        </p>
+        <p>
+            Department name: {{singleEmployee.departmentId.departmentName}}
+        </p>
+    </div>
