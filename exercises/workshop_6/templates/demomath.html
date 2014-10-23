@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="jumbotron">
+
+        <p>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">First Example</h3>
+            </div>
+            <div class="panel-body">
+
+                <p>
+                    Variable no.1:<input type="number" ng-model="varA"/>
+                </p>
+                <p>
+                    Variable no.2:<input type="number" ng-model="varB"/>
+                </p>
+                <p>
+                    Sum:{{varA+varB}}
+                </p>
+                <p>
+                    Prod:{{varA * varB}}
+                </p>
+                <p>
+                    Frac:{{varA / varB}}
+                </p>
+                <p>
+                    Dif:{{varA-varB}}
+                </p>
+
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    Second Example
+                </h3>
+            </div>
+            <div class="panel-body">
+                <div ng-include="childtemplate"></div>
+            </div>
+        </div>
+        </p>
+    </div>
+</div>

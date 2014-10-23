@@ -1,0 +1,57 @@
+
+    <p ng-show="aux">
+        <b>Information</b>
+    </p>
+    <p ng-show="aux">
+       First Name:   {{selectedEmployee.firstName}}
+    </p>
+    <p ng-show="aux">
+        Last Name: {{selectedEmployee.lastName}}
+    </p>
+    <p ng-show="aux">
+        Department name: {{selectedEmployee.departmentId.departmentName}}
+    </p>
+    <p ng-show="aux">
+        Phone Number: {{selectedEmployee.phoneNumber}}
+    </p>
+    <p ng-show="aux">
+        Salary: {{selectedEmployee.salary}}
+    </p>
+    <p ng-show="aux">
+        Location: {{selectedEmployee.departmentId.locationId.city}}
+    </p>
+
+    <p ng-hide="no">
+        ERROR INFORMATION COULD NOT BE DISPLAYED
+    </p>
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Salary</th>
+        <th>Department Name</th>
+        <th>Actions</th>
+    </tr>
+    <tr ng-repeat="employee in employees">
+        <td>
+            {{employee.employeeId}}
+        </td>
+        <td>
+            {{employee.firstName}}
+        </td>
+        <td>
+            {{employee.lastName}}
+        </td>
+        <td>
+            {{employee.salary}}
+        </td>
+        <td>
+            {{employee.departmentId.departmentName}}
+        </td>
+
+        <td>
+            <a class="btn btn-primary btn-lg" role="button"  ng-click="moreInfo(employee)">More Info</a>
+        </td>
+    </tr>
+</table>

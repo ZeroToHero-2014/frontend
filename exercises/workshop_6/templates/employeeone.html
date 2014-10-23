@@ -1,0 +1,40 @@
+
+
+<div class="col-lg-6">
+    <div class="form-group">
+        <label for="employeeId">Employee Name:</label>
+        <select id="employeeId"  class="form-control"
+                ng-model="selectedemployees" ng-click="getID()"
+                ng-options="employee as employee.firstName+' '+employee.lastName for employee in employees">
+        </select>
+    </div>
+</div>
+
+
+<table class="table table-bordered" ng-show=true>
+    <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Salary</th>
+        <th>Department Name</th>
+    </tr>
+    <tr >
+        <td>
+            {{oneEmp.employeeId}}
+        </td>
+        <td>
+            {{oneEmp.firstName}}
+        </td>
+        <td>
+            {{oneEmp.lastName}}
+        </td>
+        <td>
+            {{oneEmp.salary}}
+        </td>
+        <td>
+            {{oneEmp.departmentId.departmentName}}
+        </td>
+    </tr>
+</table>
+
