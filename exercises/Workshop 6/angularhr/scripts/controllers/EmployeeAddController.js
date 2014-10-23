@@ -24,9 +24,13 @@ hrApp.controller('EmployeeAddController', ['$scope', '$http', function ($scope, 
      */
     $scope.create = function (addEmployee) {
         console.log(addEmployee);
-        $http({url: 'http://demo.teamnet.ro:8282/datamodel/employees/create', method: 'PUT',data:addEmployee}).
+        $http({url: 'http://demo.teamnet.ro:8282/datamodasdasdel/employees/create', method: 'PUT', data: addEmployee}).
             success(function (data) {
                 $scope.employee = data;
+            }).
+            error(function (data, status, headers, config) {
+                $('#divmodal').modal();
+                $scope.mesaj = "mesaj de eroare:" + status;
             });
     }
 }]);

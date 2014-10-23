@@ -13,10 +13,11 @@ hrApp.controller('EmployeesListController', ['$scope', '$http', function($scope,
         $http({url: 'http://demo.teamnet.ro:8282/datamodel/employees/findOne/'+idangajat , method: 'GET'}).
             success(function (data, status, headers, config) {
                 $scope.details = data;
-                 console.log(data);
+                // console.log(data);
             }).
             error(function (data, status, headers, config) {
             });
     }
+
 
 }]);

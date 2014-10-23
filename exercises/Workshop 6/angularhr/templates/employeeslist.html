@@ -31,17 +31,30 @@
             {{employee.departmentId.departmentName}}
         </td>
         <td>
-            <a class="btn btn-primary btn-lg" role="button" ng-click="cauta(employee.employeeId)">Details</a>
+            <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" role="button" ng-click="cauta(employee.employeeId)">Details</a>
         </td>
     </tr>
 </table>
-<p>Id:{{details.employeeId}}</p>
-<p>First Name:{{details.firstName}}</p>
-<p>Last Name:{{details.lastName}}</p>
-<p>Salary:{{details.salary}}</p>
-<p>Department Name:{{details.departmentId.departmentName}}</p>
-<p>Department Location:{{details.departmentId.locationId.city}}</p>
-<p>E-mail:{{details.email}}</p>
-<p>Phone Number{{details.phoneNumber}}</p>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">{{details.firstName}} {{details.lastName}}</h4>
+            </div>
+            <div class="modal-body">
+                <p>Id:{{details.employeeId}}</p>
+                <p>Salary:{{details.salary}}</p>
+                <p>Department Name:{{details.departmentId.departmentName}}</p>
+                <p>Department Location:{{details.departmentId.locationId.city}}</p>
+                <p>E-mail:{{details.email}}</p>
+                <p>Phone Number{{details.phoneNumber}}</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

@@ -1,7 +1,7 @@
 hrApp.controller('MathController', ['$scope', function($scope) {
     $scope.title = 'Demomath - Calcule';
    // $scope.childtemplate = 'templates/childscope.html';
-    //$scope.parseInt = parseInt;
+    $scope.parseInt = parseInt;
     $scope.resetVarA = function() {
         $scope.VarA = undefined;
     };
@@ -17,9 +17,17 @@ hrApp.controller('MathController', ['$scope', function($scope) {
     };
 
 // forteaza doar numere la input:
-    $(".numar").keypress(function (e) {
-        if (String.fromCharCode(e.keyCode).match(/[^0-9]/g)) return false;
-    });
+//    $(".numar").keypress(function (e) {
+//        if (String.fromCharCode(e.keyCode).match(/[^0-9]/g)) return false;
+//    });
 
+    jQuery('.numar').keyup(function(){
+        var valoare = jQuery(this).val();
+        if(valoare.match(/[^0-9]/g)){
+            valoare = valoare.substr(0,valoare.length-1);
+            jQuery(this).val(valoare);
+
+        }
+    });
 
 }]);
