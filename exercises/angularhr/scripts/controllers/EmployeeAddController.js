@@ -1,5 +1,7 @@
 hrApp.controller('EmployeeAddController', ['$scope', '$http', function ($scope, $http) {
     $scope.employee = {};
+    $scope.showSucces=false;
+    $scope.showError=false;
     $http({url: 'http://demo.teamnet.ro:8282/datamodel/departments/findAll', method: 'GET'}).
         success(function (data) {
             $scope.departments = data;
@@ -27,6 +29,10 @@ hrApp.controller('EmployeeAddController', ['$scope', '$http', function ($scope, 
         $http({url: 'http://demo.teamnet.ro:8282/datamodel/employees/create', method: 'PUT',data:addEmployee}).
             success(function (data) {
                 $scope.employee = data;
-            });
+                $scope.showSucces=true;
+            }).
+            error(function(data, status, headers, config) {
+                $scope.showError=true;
+        });
     }
 }]);

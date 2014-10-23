@@ -28,6 +28,6 @@ hrApp.controller('DepartmentSearchController', ['$scope', '$http', function($sco
 
         }
        if(aux==1) {$scope.show=true; $scope.show1=false;}
-            else if(aux==0) $scope.show1=true;
+            else if(aux==0) {$scope.show1=true; $scope.show=false;}
     }
 }]);

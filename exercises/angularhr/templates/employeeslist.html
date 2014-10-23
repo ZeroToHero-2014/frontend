@@ -1,3 +1,41 @@
+<table class="table table-bordered" ng-show="show">
+    <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Salary</th>
+        <th>Department Name</th>
+        <th>Email</th>
+        <th>Phone Number</th>
+        <th>Department City</th>
+    </tr>
+    <tr>
+        <td>
+            {{id}}
+        </td>
+       <td>
+            {{firstName}}
+        </td>
+        <td>
+            {{lastName}}
+        </td>
+        <td>
+            {{salary}}
+        </td>
+        <td>
+            {{departmentName}}
+        </td>
+        <td>
+            {{email}}
+        </td>
+        <td>
+            {{phone}}
+        </td>
+        <td>
+            {{city}}
+        </td>
+    </tr>
+</table>
 <table class="table table-bordered">
     <tr>
         <th>ID</th>
@@ -5,6 +43,7 @@
         <th>Last Name</th>
         <th>Salary</th>
         <th>Department Name</th>
+        <th>Action</th>
     </tr>
     <tr ng-repeat="employee in employees">
         <td>
@@ -21,6 +60,9 @@
         </td>
         <td>
             {{employee.departmentId.departmentName}}
+        </td>
+        <td>
+            <a class="btn btn-primary btn-lg" role="button" ng-click="action(employee)">Click</a>
         </td>
     </tr>
 </table>
