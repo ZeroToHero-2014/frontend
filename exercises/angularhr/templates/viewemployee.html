@@ -1,0 +1,35 @@
+<div class="row">
+<div class="col-lg-6">
+    <div class="form-group">
+    <label for="selectEmployee">Employee:</label>
+    <select id="selectEmployee" ng-model="employee" class="form-control" ng-required ng-click="request()"
+            ng-options="employees as employees.firstName+' '+ employees.lastName for employees in employees"></select>
+        </div>
+</div>
+</div>
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Salary</th>
+        <th>Department Name</th>
+    </tr>
+    <tr >
+        <td >
+            {{viewEmployee.employeeId}}
+        </td>
+        <td>
+            {{viewEmployee.firstName}}
+        </td>
+        <td>
+            {{viewEmployee.lastName}}
+        </td>
+        <td>
+            {{viewEmployee.salary}}
+        </td>
+        <td>
+            {{viewEmployee.departmentId.departmentName}}
+        </td>
+    </tr>
+</table>

@@ -1,0 +1,38 @@
+<h3 ng-show="visible">ID:{{selectedEmployee.employeeId}}</h3>
+<h3 ng-show="visible">First name:{{selectedEmployee.firstName}}</h3>
+<h3 ng-show="visible">Last name:{{selectedEmployee.lastName}}</h3>
+<h3 ng-show="visible">Salary:{{selectedEmployee.salary}}</h3>
+<h3 ng-show="visible">Department name:{{selectedEmployee.departmentId.departmentName}}</h3>
+<h3 ng-show="visible">email:{{selectedEmployee.email}}</h3>
+<h3 ng-show="visible">Phone number:{{selectedEmployee.phoneNumber}}</h3>
+<h3 ng-show="visible">Department city:{{selectedEmployee.departmentId.locationId.city}}</h3>
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Salary</th>
+        <th>Department Name</th>
+        <th>Action</th>
+    </tr>
+
+    <tr ng-repeat="employee in employees">
+        <td>
+            {{employee.employeeId}}
+        </td>
+        <td>
+            {{employee.firstName}}
+        </td>
+        <td>
+            {{employee.lastName}}
+        </td>
+        <td>
+            {{employee.salary}}
+        </td>
+        <td>
+            {{employee.departmentId.departmentName}}
+        </td>
+        <td><a class="btn btn-default" ng-click="actionTrigger(employee)">Action</a></td>
+
+    </tr>
+</table>
