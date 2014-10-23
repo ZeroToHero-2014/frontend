@@ -16,5 +16,9 @@ hrApp.controller('MathController', ['$scope', function($scope) {
         $scope.VarB = val;
     };
 
+    $(".numar").keypress(function (e) {
+        if (String.fromCharCode(e.keyCode).match(/[^0-9]/g)) return false;
+    });
+
 
 }]);
