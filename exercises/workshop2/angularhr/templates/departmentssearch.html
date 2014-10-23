@@ -1,0 +1,30 @@
+
+<div class="jumbotron">
+    <h1>{{title}}</h1>
+    <div class="panel-body">
+        <p>
+            Department Id: <input type="text" ng-model="departmentId"/>
+        </p>
+        <p>
+            <a class="btn btn-primary btn-lg" role="button" ng-click="searchByDepartmentId()">Search Department By Id</a>
+        </p>
+        <table class="table table-bordered">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>City</th>
+            </tr>
+            <tr>
+                <td>
+                    {{department.departmentId}}
+                </td>
+                <td>
+                    {{department.departmentName}}
+                </td>
+                <td>
+                    {{department.locationId.city}}
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
