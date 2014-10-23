@@ -5,7 +5,7 @@ hrApp.controller('DepartmentSearchController', ['$scope', '$http', function($sco
     //};
     $scope.search = function () {
         $scope.result = [];
-        $scope.inputvalue = [];
+       // $scope.inputvalue = [];
 
     $http.get('http://demo.teamnet.ro:8282/datamodel/departments/findOne/' +$scope.inputvalue).
         success(function (data, status, headers, config) {
