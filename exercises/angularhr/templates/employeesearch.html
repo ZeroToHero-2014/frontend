@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="panel panel-default">
+        <div class="jumbotron">
+            <h1 class="panel-title">{{title}}</h1>
+        </div>
+        <div class="panel-body">
+
+            <p>
+            <h3>Search Employee By Id: <input type="number" ng-model="inputValue"><h2 ng-show="error3">Error! Value not found</h2> </h3>
+            </p>
+            <p>
+                <button class="btn btn-primary btn-lg"  ng-click="search1()">Search</button>
+            </p>
+
+            <table class="table table-bordered" ng-show="visible">
+                <tr>
+                    <th>ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Salary</th>
+                    <th>Department Name</th>
+                </tr>
+                <tr ng-repeat="employee in employees">
+                    <td>
+                        {{employee.employeeId}}
+                    </td>
+                    <td>
+                        {{employee.firstName}} </td>
+                    <td>
+                        {{employee.lastName}}
+                    </td>
+                    <td>
+                        {{employee.salary}}
+                    </td>
+                    <td>
+                        {{employee.departmentId.departmentName}}
+                    </td>
+            </table>
+
+        </div>
+    </div>
+</div>
