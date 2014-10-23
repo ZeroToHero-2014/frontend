@@ -1,0 +1,27 @@
+<div class="container">
+<div class="jumbotron">
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Demo Math</h3>
+        </div>
+        <div class="panel-body">
+            <p>
+                Number A: <input type="number" ng-model="numA"/>
+                </p>
+            <p>
+                Number B: <input type="number" ng-model="numB"/>
+            </p>
+<p>
+    Addition: {{numA + numB}} <br/>
+    Subtraction:{{numA- numB}} <br/>
+    Division:           {{ division(numA,numB)}}        <br/>
+   <p ng-hide = 'numA && numB'> Multiplication:</p>
+            <p  ng-if = "numA && numB"> Multiplication:   {{numA * numB }} </p>
+
+
+            </div>
+
+
+</div>
+</div>
