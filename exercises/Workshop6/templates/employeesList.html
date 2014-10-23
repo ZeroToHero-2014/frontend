@@ -12,8 +12,9 @@
         <th>Last Name</th>
         <th>Salary</th>
         <th>Department Name</th>
+        <th>Actions</th>
     </tr>
-    <tr ng-repeat="employee in employees">
+    <tr ng-repeat="employee in employees" ng-model="ourEmployee">
         <td>
             {{employee.employeeId}}
         </td>
@@ -29,7 +30,39 @@
         <td>
             {{employee.departmentId.departmentName}}
         </td>
+        <td>
+            <a class="btn btn-primary btn-lg" role="button" ng-click="getEmployeeDetails(employee.employeeId)">Get details</a>
+
+        </td>
     </tr>
+    <div class="container">
+        <div class="jumbotron">
+           <p>
+               ID: {{ptButon.employeeId}}
+           </p>
+            <p>
+                First name: {{ptButon.firstName}}
+            </p>
+            <p>
+                Last name: {{ptButon.lastName}}
+            </p>
+            <p>
+                Salary: {{ptButon.salary}}
+            </p>
+            <p>
+                Department ID: {{ptButon.departmentId.departmentName}}
+            </p>
+            <p>
+                Email: {{ptButon.email}}
+            </p>
+            <p>
+                Phone number: {{ptButon.phoneNumber}}
+            </p>
+            <p>
+                State province: {{ptButon.departmentId.locationId.stateProvince}}
+            </p>
+        </div>
+    </div>
 </table>
 </body>
 </html>
