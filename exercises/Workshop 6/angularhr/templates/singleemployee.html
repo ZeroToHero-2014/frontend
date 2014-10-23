@@ -1,0 +1,28 @@
+<div class="'container"></div>
+        <select ng-options="name.firstName for name in employees" ng-model="singleEmployee"></select>
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Salary</th>
+        <th>Department Name</th>
+    </tr>
+    <tr>
+        <td>
+            {{singleEmployee.employeeId}}
+        </td>
+        <td>
+            {{singleEmployee.firstName}}
+        </td>
+        <td>
+            {{singleEmployee.lastName}}
+        </td>
+        <td>
+            {{singleEmployee.salary}}
+        </td>
+        <td>
+            {{singleEmployee.departmentId.departmentName}}
+        </td>
+    </tr>
+</table>
