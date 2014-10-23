@@ -9,6 +9,14 @@ hrApp.config(['$routeProvider', function($routeProvider) {
             templateUrl: 'templates/contactUs.html',
             controller: 'MainController'
         })
+        .when('/twowaybinding', {
+            templateUrl: 'templates/scopes.html',
+            controller: 'ScopesController'
+        })
+        .when('/demomath', {
+            templateUrl: 'templates/demomath.html',
+            controller: 'MathController'
+        })
         .otherwise({
             templateUrl: 'templates/main.html',
             controller: 'MainController'
