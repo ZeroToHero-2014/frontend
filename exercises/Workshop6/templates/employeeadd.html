@@ -5,7 +5,7 @@
     <title></title>
 </head>
 <body>
-<div class="container" ng-form="employeeAddForm">
+<div class="container" ng-form="employeeAddForm"> <!--ng-show="errorValue"-->
     <div ng-form="employeeAddForm">
         <div class="row">
             <div class="col-lg-6">
@@ -64,6 +64,17 @@
                 <div class="container">
                     <button class="btn btn-default" ng-click="reset()">RESET</button>
                     <button class="btn btn-default" ng-disabled="employeeAddForm.$invalid" ng-click="create(employee)">SAVE</button>
+                </div>
+            </div>
+        </div>
+        <div class="row" ng-show="errorValue">
+            <div class="col-md-5">
+                <p>
+                    <b>{{error}}</b>
+                </p>
+            </div>
+            <div class="col-md-7">
+                <div class="container">
                 </div>
             </div>
         </div>
