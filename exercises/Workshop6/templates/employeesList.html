@@ -32,10 +32,9 @@
         </td>
         <td>
             <a class="btn btn-primary btn-lg" role="button" ng-click="getEmployeeDetails(employee.employeeId)">Get details</a>
-
         </td>
     </tr>
-    <div class="container">
+    <div class="container" ng-show="myValue">
         <div class="jumbotron">
            <p>
                ID: {{ptButon.employeeId}}
@@ -60,6 +59,9 @@
             </p>
             <p>
                 State province: {{ptButon.departmentId.locationId.stateProvince}}
+            </p>
+            <p>
+                <a class="btn btn-primary btn-lg" role="button" ng-click="hideDetails()">Hide details!</a>
             </p>
         </div>
     </div>
