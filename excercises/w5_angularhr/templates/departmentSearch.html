@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div class="jumbotron">
+    <h1>{{title}}</h1>
+    <p>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Search department</h3>
+        </div>
+        <div class="panel-body">
+
+            <p>
+                Enter id: <input type="number" ng-model="inputValue"/>
+            </p>
+            <p>
+                <a class="btn btn-primary btn-lg" role="button" ng-click="searchUserById(inputValue)">Search department by id</a>
+            </p>
+            <p>
+                {{departments}}
+            </p>
+            <p>
+                {{errMsg}}
+            </p>
+            <p>
+                Your input: {{inputValue}}
+            </p>
+        </div>
+    </div>
+</body>
+</html>
