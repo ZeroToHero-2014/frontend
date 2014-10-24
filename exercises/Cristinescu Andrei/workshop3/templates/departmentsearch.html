@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="jumbotron">
+        <h1>{{title}}</h1>
+        <p>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">A very smart search application</h3>
+            </div>
+            <div class="panel-body">
+                <p>
+                    <form name="form">
+                        First number: <input type="text" name="departament" ng-model="departament"/>
+                        <span ng-show="form.departament.$error">{{eroare}}</span>
+                    </form>
+                </p>
+                <p>
+                <table class="table table-bordered">
+
+                    <tr>
+                        <th>ID</th>
+                        <th>Department Name</th>
+                        <th>City</th>
+                        <th>Location Id</th>
+                        <th>Postal Code</th>
+                        <th>State Province</th>
+                        <th>Street Address</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            {{departments.departmentId}}
+                        </td>
+                        <td>
+                            {{departments.departmentName}}
+                        </td>
+                        <td>
+                            {{departments.locationId.city}}
+                        </td>
+                        <td>
+                            {{departments.locationId.locationId}}
+                        </td>
+                        <td>
+                            {{departments.locationId.postalCode}}
+                        </td>
+                        <td>
+                            {{departments.locationId.stateProvince}}
+                        </td>
+                        <td>
+                            {{departments.locationId.streetAddress}}
+                        </td>
+                    </tr>
+
+                <p>
+                    <a class="btn btn-primary btn-lg" role="button" ng-click="search()">Search Department By Id</a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</div>

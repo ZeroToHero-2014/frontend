@@ -16,6 +16,10 @@ hrApp.controller('MenuController', ['$scope','employeeActionsService', function(
         {
             label: "Drop Menu",
             url: "#/dropdown"
+        },
+        {
+            label: "Department Search",
+            url: "#/departmentsearch"
         }
     ];
 
