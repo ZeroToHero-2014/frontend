@@ -1,0 +1,79 @@
+
+
+<table class="table table-bordered" ng-show="visible">
+    <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Salary</th>
+        <th>Department Name</th>
+        <th>email</th>
+        <th>Phone Number</th>
+        <th>Department City</th>
+        <th>Actions</th>
+    </tr>
+    <tr >
+        <td>
+            {{employee.employeeId}}
+        </td>
+        <td>
+            {{employee.firstName}}
+        </td>
+        <td>
+            {{employee.lastName}}
+        </td>
+        <td>
+            {{employee.salary}}
+        </td>
+        <td>
+            {{employee.departmentId.departmentName}}
+        </td>
+        <td>
+            {{employee.email}}
+        </td>
+        <td>
+            {{employee.phoneNumber}}
+        </td>
+        <td>
+            {{employee.departmentId.locationId.city}}
+        </td>
+        <td>
+            <button class="btn btn-primary btn-lg" ng-model="id"
+                    ng-click="hide()">Hide</button>
+        </td>
+
+    </tr>
+</table>
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Salary</th>
+        <th>Department Name</th>
+        <th>Actions</th>
+    </tr>
+
+
+    <tr ng-repeat="employee in employees">
+        <td>
+            {{employee.employeeId}}
+        </td>
+        <td>
+            {{employee.firstName}}
+        </td>
+        <td>
+            {{employee.lastName}}
+        </td>
+        <td>
+            {{employee.salary}}
+        </td>
+        <td>
+            {{employee.departmentId.departmentName}}
+        </td>
+        <td>
+            <button class="btn btn-primary btn-lg" ng-model="id"
+                     ng-click="info(employee)">Info</button>
+        </td>
+    </tr>
+</table>
