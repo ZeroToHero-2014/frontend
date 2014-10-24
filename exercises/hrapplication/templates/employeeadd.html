@@ -1,0 +1,83 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">Add new employee</h2>
+    </div>
+    <div class="panel-body">
+        <div ng-form="employeeAddForm">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="firstName">First Name:</label>
+                        <input type="text" id="firstName"
+                               class="form-control" ng-model="employee.firstName"
+                               placeholder="First Name" required>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" id="lastName"
+                               class="form-control" ng-model="employee.lastName"
+                               placeholder="Last Name" required minlength="4">
+                        <div ng-messages="employeeAddForm.lastName.$error" class="errors">
+                                <div ng-message="required">Required!</div>
+                                <div ng-message="minlength">Min 4 chars</div>
+                                <!-- <div ng-message="maxlength">Max 15 chars allowed</div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label
+                                for="departmentId">Department:</label>
+                        <select id="departmentId" ng-model="employee.departmentId" class="form-control" required
+                                ng-options="v as v.departmentName
+for v in departments">
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="manager">Manager:</label>
+                        <select id="manager" ng-model="employee.managerId" class="form-control" required
+                                ng-options="v as v.firstName+' '+
+v.lastName for v in managers">
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="job">Job:</label>
+                        <select id="job" ng-model="employee.jobId"
+                                class="form-control" required
+                                ng-options="v as v.jobTitle+'
+salary:['+v.minSalary+':'+v.maxSalary+']' for v in jobs">
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="phoneNumber">Phone
+                            Number:</label>
+                        <input type="text" id="phoneNumber"
+                               class="form-control" ng-model="employee.phoneNumber"
+                               placeholder="Phone Number" required>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5"></div>
+                <div class="col-md-7">
+                    <div class="container">
+                        <button class="btn btn-default" ng-click="reset()">RESET</button>
+                        <button class="btn btn-default" ng-disabled="employeeAddForm.$invalid" ng-click="create(employee)">SAVE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
