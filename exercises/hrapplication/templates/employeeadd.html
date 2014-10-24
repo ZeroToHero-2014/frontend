@@ -7,16 +7,46 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="form-group">
-                        <label for="firstName" >First Name:<span ng-show="employeeAddForm.firstName.$error.required">Must be between 4 and 15 characters.</span></label>
+                        <label for="firstName" >First Name:</label>
                         <input name="firstName" type="text" id="firstName" class="form-control" ng-model="employee.firstName"
                                placeholder="First Name" ng-minlength ="4" ng-maxlength="15" required>
+                        <div class="error"
+                             ng-show="employeeAddForm.firstName.$dirty && employeeAddForm.firstName.$invalid">
+                            <small class="error"
+                                   ng-show="employeeAddForm.firstName.$error.required">
+                                Your name is required.
+                            </small>
+                            <small class="error"
+                                   ng-show="employeeAddForm.firstName.$error.minlength">
+                                Your name is required to be at least 4 characters
+                            </small>
+                            <small class="error"
+                                   ng-show="employeeAddForm.firstName.$error.maxlength">
+                                Your name cannot be longer than 15 characters
+                            </small>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="form-group">
-                        <label for="lastName">Last Name:<span ng-show="employeeAddForm.lastName.$error.required">Must be between 4 and 15 characters.</span></label>
+                        <label for="lastName">Last Name:</label>
                         <input name="lastName" type="text" id="lastName" class="form-control" ng-model="employee.lastName"
                                placeholder="Last Name" ng-minlength ="4" ng-maxlength="15" required>
+                        <div class="error"
+                             ng-show="employeeAddForm.lastName.$dirty && employeeAddForm.lastName.$invalid">
+                            <small class="error"
+                                   ng-show="employeeAddForm.lastName.$error.required">
+                                Your name is required.
+                            </small>
+                            <small class="error"
+                                   ng-show="employeeAddForm.lastName.$error.minlength">
+                                Your name is required to be at least 4 characters
+                            </small>
+                            <small class="error"
+                                   ng-show="employeeAddForm.lastName.$error.maxlength">
+                                Your name cannot be longer than 15 characters
+                            </small>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -50,9 +80,24 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="form-group">
-                        <label for="phoneNumber">Phone Number:<span ng-show="employeeAddForm.phoneNumber.$error.required">Must be between 4 and 15 characters.</span></label>
+                        <label for="phoneNumber">Phone Number:</label>
                         <input name="phoneNumber" type="text" id="phoneNumber" class="form-control" ng-model="employee.phoneNumber"
                                placeholder="Phone Number" ng-minlength ="6" ng-maxlength="14" required>
+                        <div class="error"
+                             ng-show="employeeAddForm.phoneNumber.$dirty && employeeAddForm.phoneNumber.$invalid">
+                            <small class="error"
+                                   ng-show="employeeAddForm.phoneNumber.$error.required">
+                                Your phone number is required.
+                            </small>
+                            <small class="error"
+                                   ng-show="employeeAddForm.phoneNumber.$error.minlength">
+                                Your phone number is required to be at least 6 characters
+                            </small>
+                            <small class="error"
+                                   ng-show="employeeAddForm.phoneNumber.$error.maxlength">
+                                Your phone number cannot be longer than 14 characters
+                            </small>
+                        </div>
                     </div>
                 </div>
             </div>
