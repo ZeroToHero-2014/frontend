@@ -51,6 +51,8 @@
                 <div class="container">
                     <button class="btn btn-default" ng-click="reset()">RESET</button>
                     <button class="btn btn-default" ng-disabled="employeeAddForm.$invalid" ng-click="create(employee)">SAVE</button>
+                    <button class="btn btn-default" ng-disabled="true" ng-show="showSucces">Succes!</button>
+                    <button class="btn btn-default" ng-disabled="true" ng-show="showError">Error!</button>
                 </div>
             </div>
         </div>
