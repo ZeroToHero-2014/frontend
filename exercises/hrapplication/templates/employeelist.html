@@ -1,0 +1,28 @@
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Department Name</th>
+        <th>Actions</th>
+    </tr>
+    <tr ng-repeat="employee in employees | orderBy:'employeeId'">
+        <td>
+            {{employee.employeeId}}
+        </td>
+        <td>
+            {{employee.firstName}}
+        </td>
+        <td>
+            {{employee.lastName}}
+        </td>
+        <td>
+            {{employee.departmentId.departmentName}}
+        </td>
+        <td>
+            <button type="button" class="btn btn-default" ng-click="viewEmployee(employee.employeeId)">View</button>
+            <button type="button" class="btn btn-default" ng-click="editEmployee(employee.employeeId)">Edit</button>
+            <button type="button" class="btn btn-default" ng-click="deleteEmployee(employee.employeeId)">Delete</button>
+        </td>
+    </tr>
+</table>
