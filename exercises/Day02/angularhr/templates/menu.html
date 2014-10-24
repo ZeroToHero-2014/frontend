@@ -12,24 +12,43 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
+                <!-- Home Button -->
                 <li><a href="#">Home</a></li>
-            </ul>
-            <ul class="nav navbar-nav">
+
+                <!-- Demo Action Button -->
+                <li class="dropdown">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown">Demo actions<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li ng-repeat="action in demoActionList"><a href="{{action.url}}">{{action.label}}</a></li>
+                    </ul>
+                </li>
+
+                <!-- Department Button -->
+                <li class="dropdown">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown">Department actions<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li ng-repeat="action in departmentActionList"><a href="{{action.url}}">{{action.label}}</a></li>
+                    </ul>
+                </li>
+
+                <!-- Dropdown Button -->
+                <li><a href="#/dropdown">Dropdown</a></li>
+
+                <!--Employee Button -->
+                <li class="dropdown">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown">Employee actions<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li ng-repeat="action in employeeActionList"><a href="{{action.url}}">{{action.label}}</a></li>
+                    </ul>
+                </li>
+
+                <!--Contact Button -->
                 <li><a href="#/contact">Contact</a></li>
             </ul>
+
             <ul class="nav navbar-nav navbar-right">
                 <li><a>Date: {{currentDate | date:'dd-MM-yyyy'}}</a></li>
             </ul>
         </div>
     </div>
-
-    <li class="dropdown">
-        <a href="" class="dropdown-toggle" data-toggle="dropdown">Demo actions<span class="caret"></span></a>
-        <ul class="dropdown-menu" role="menu">
-            <li ng-repeat="action in demoActionList"><a href="{{action.url}}">{{action.label}}</a></li>
-            <li ng-repeat="action in demoMathList"><a href="{{action.url}}">{{action.label}}</a></li>
-            <li><a href="#/departmentslist">Departments List</a></li>
-            <li><a href="#/departmentsearch">Search Department</a></li>
-        </ul>
-    </li>
 </nav>

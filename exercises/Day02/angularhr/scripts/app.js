@@ -15,18 +15,43 @@ hrApp.config(['$routeProvider',function($routeProvider) {
         })
 
         .when('/demomath', {
-            templateUrl:'templates/demo.html',
+            templateUrl:'templates/demoMath.html',
             controller: 'DemoMathController'
         })
 
         .when('/departmentslist', {
-            templateUrl: 'templates/departmentslist.html',
+            templateUrl: 'templates/departmentsList.html',
             controller: 'DepartmentsListController'
         })
 
         .when('/departmentsearch', {
-            templateUrl: 'templates/searchdepartment.html',
+            templateUrl: 'templates/departmentSearch.html',
             controller: 'DepartmentSearchController'
+        })
+
+        .when('/dropdown', {
+            templateUrl: 'templates/dropdown.html',
+            controller: 'DropdownController'
+        })
+
+        .when('/employeeslist', {
+            templateUrl: 'templates/employeesList.html',
+            controller: 'EmployeesListController'
+        })
+
+        .when('/employeeadd', {
+            templateUrl: 'templates/employeeAdd.html',
+            controller: 'EmployeeAddController'
+        })
+
+        .when('/employeesearch', {
+            templateUrl: 'templates/employeeSearch.html',
+            controller: 'EmployeeSearchController'
+        })
+
+        .when('/employeeselect', {
+            templateUrl: 'templates/employeeSelect.html',
+            controller: 'EmployeeSelectController'
         })
 
         .otherwise({

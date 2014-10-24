@@ -9,9 +9,9 @@ hrApp.controller('DepartmentSearchController', ['$scope', '$http', function($sco
             success(function(data, status, headers, config) {
                 $scope.department = data;
                 if (data == "null")
-                    $scope.result = "Eroare";
+                    $scope.result = "ID not found. Error!";
                 else
-                    $scope.result = "succes";
+                    $scope.result = "Success!";
 
                     }).
                 error(function(data, status, headers, config) {

@@ -1,0 +1,56 @@
+<div class="container" ng-form="employeeSelectForm">
+    <div ng-form="employeeSelectForm">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="employee.nume">Employees:</label>
+                    <select id="employee.nume" ng-model="selectedEmployee" class="form-control" ng-required
+                            ng-click="searchEmployee()"
+                            ng-options="v as v.firstName + ' ' + v.lastName for v in employees">
+                    </select>
+                </div>
+            </div>
+        </div>
+        <!-- cine e employeeId din for, id si cum fac legatura cu controller -->
+
+        <p>
+            Result: {{employee}}
+        </p>
+
+        <table class="table table-bordered">
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Salary</th>
+                <th>Department Name</th>
+            </tr>
+            <tr>
+                <td>
+                    {{selectedEmployee.employeeId}}
+                </td>
+                <td>
+                    {{selectedEmployee.firstName}}
+                </td>
+                <td>
+                    {{selectedEmployee.lastName}}
+                </td>
+                <td>
+                    {{selectedEmployee.salary}}
+                </td>
+                <td>
+                    {{selectedEmployee.departmentId.departmentName}}
+                </td>
+            </tr>
+        </table>
+        <!--<div class="row">-->
+            <!--<div class="col-md-5"></div>-->
+            <!--<div class="col-md-7">-->
+                <!--<div class="container">-->
+                    <!--<button class="btn btn-default" ng-click="reset()">RESET</button>-->
+                    <!--<button class="btn btn-default" ng-disabled="employeeAddForm.$invalid" ng-click="create(employee)">SAVE</button>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    </div>
+</div>
