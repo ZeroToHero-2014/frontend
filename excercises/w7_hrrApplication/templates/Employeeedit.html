@@ -1,0 +1,114 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">Edit employee <b>{{employee.firstName}} {{employee.lastName}}</b></h2>
+    </div>
+    <div class="panel-body">
+        <div ng-form="employeeAddForm">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="firstName">First Name:</label>
+                        <input type="text" id="firstName" name="name" class="form-control" ng-model="employee.firstName"
+                               placeholder="First Name" required ng-minlength=4  ng-maxlength=15>
+                    </div>
+                    <div class="error"
+                         ng-show="employeeAddForm.name.$dirty && employeeAddForm.name.$invalid">
+                        <small class="error"
+                               ng-show="employeeAddForm.name.$error.required">
+                            Your name is required.
+                        </small>
+                        <small class="error"
+                               ng-show="employeeAddForm.name.$error.minlength">
+                            Your name cannot be less than 4 characters.
+                        </small>
+                        <small class="error"
+                               ng-show="employeeAddForm.name.$error.maxlength">
+                            Your name cannot be more than 15 characters.
+                        </small>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" id="lastName" name="nameL" class="form-control" ng-model="employee.lastName"
+                               placeholder="Last Name" required  ng-minlength=4  ng-maxlength=15>
+                    </div>
+                    <div class="errorL"
+                         ng-show="employeeAddForm.nameL.$dirty && employeeAddForm.nameL.$invalid">
+                        <small class="errorL"
+                               ng-show="employeeAddForm.nameL.$error.required">
+                            Your name is required.
+                        </small>
+                        <small class="errorL"
+                               ng-show="employeeAddForm.nameL.$error.minlength">
+                            Your name cannot be less than 4 characters.
+                        </small>
+                        <small class="errorL"
+                               ng-show="employeeAddForm.nameL.$error.maxlength">
+                            Your name cannot be more than 15 characters.
+                        </small>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="departmentId">Department:</label>
+                        <select id="departmentId"  ng-model="employee.departmentId.departmentId" class="form-control" ng-required
+                                ng-options="v.departmentId as v.departmentName for v in departments">
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="manager">Manager:</label>
+                        <select id="manager" ng-model="employee.managerId.employeeId" class="form-control"
+                                ng-options="v.employeeId as v.firstName+' '+ v.lastName for v in managers">
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="job">Job:</label>
+                        <select id="job" ng-model="employee.jobId.jobId" class="form-control" ng-required
+                                ng-options="v.jobId as v.jobTitle+' salary:['+v.minSalary+':'+v.maxSalary+']' for v in jobs">
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="phoneNumber">Phone Number:</label>
+                        <input type="text" id="phoneNumber" name="phone" class="form-control" ng-model="employee.phoneNumber"
+                               placeholder="Phone Number" required ng-minlength=6  ng-maxlength=14>
+                    </div>
+                    <div class="errorP"
+                         ng-show="employeeAddForm.phone.$dirty && employeeAddForm.phone.$invalid">
+                        <small class="errorP"
+                               ng-show="employeeAddForm.phone.$error.required">
+                            Your name is required.
+                        </small>
+                        <small class="errorP"
+                               ng-show="employeeAddForm.phone.$error.minlength">
+                            Your name cannot be less than 6 characters.
+                        </small>
+                        <small class="errorP"
+                               ng-show="employeeAddForm.phone.$error.maxlength">
+                            Your name cannot be more than 14 characters.
+                        </small>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5"></div>
+                <div class="col-md-7">
+                    <div class="container">
+                        <button class="btn btn-default" ng-click="reset()">RESET</button>
+                        <button class="btn btn-default" ng-disabled="employeeAddForm.$invalid" ng-click="create(employee)">SAVE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
