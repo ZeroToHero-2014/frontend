@@ -1,0 +1,96 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">Add new employee</h2>
+    </div>
+    <div class="panel-body">
+        <div ng-form="employeeAddForm">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="firstName">First Name:</label>
+                        <input type="text" name="firstName" id="firstName" class="form-control" ng-model="employee.firstName" ng-minlength="4" ng-maxlength="15"
+                               placeholder="First Name" required>
+
+                        <div class="error"
+                             ng-show="employeeAddForm.firstName.$dirty && employeeAddForm.firstName.$invalid">
+                            <small class="error"
+                                   ng-show="employeeAddForm.firstName.$error.required">
+                                Your name is required.
+                            </small>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" name="lastName" id="lastName" class="form-control" ng-model="employee.lastName" ng-minlength="4" ng-maxlength="15"
+                               placeholder="Last Name" required>
+
+                        <div class="error"
+                             ng-show="employeeAddForm.lastName.$dirty && employeeAddForm.lastName.$invalid">
+                            <small class="error"
+                                   ng-show="employeeAddForm.lastName.$error.required">
+                                Your last name is required.
+                            </small>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="departmentId">Department:</label>
+                        <select id="departmentId" ng-model="employee.departmentId" class="form-control" required
+                                ng-options="v as v.departmentName for v in departments">
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="manager">Manager:</label>
+                        <select id="manager" ng-model="employee.managerId" class="form-control" required
+                                ng-options="v as v.firstName+' '+ v.lastName for v in managers">
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="job">Job:</label>
+                        <select id="job" ng-model="employee.jobId" class="form-control" required
+                                ng-options="v as v.jobTitle+' salary:['+v.minSalary+':'+v.maxSalary+']' for v in jobs">
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="phoneNumber">Phone Number:</label>
+                        <input type="text" name="phoneNumber" id="phoneNumber" class="form-control" ng-model="employee.phoneNumber" ng-minlength="4" ng-maxlength="15"
+                               placeholder="Phone Number" required>
+
+                        <div class="error"
+                             ng-show="employeeAddForm.phoneNumber.$dirty && employeeAddForm.phoneNumber.$invalid">
+                            <small class="error"
+                                   ng-show="employeeAddForm.phoneNumber.$error.required">
+                                Your phone number is required.
+                            </small>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5"></div>
+                <div class="col-md-7">
+                    <div class="container">
+                        <button class="btn btn-default" ng-click="reset()">RESET</button>
+                        <button class="btn btn-default" ng-disabled="employeeAddForm.$invalid" ng-click="create(employee)">SAVE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
