@@ -1,0 +1,97 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">Add new employee</h2>
+    </div>
+    <div class="panel-body">
+        <div ng-form="employeeAddForm">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="firstName">First Name:</label>
+                        <input type="text" name="firstName" id="firstName" class="form-control"
+                               ng-model="employee.firstName"
+                               placeholder="First Name" required ng-maxlength="15" ng-minlength="4">
+
+                        <div class="error"
+                             ng-show="employeeAddForm.firstName.$dirty && employeeAddForm.firstName.$invalid">
+                            <span class="error" style="color:red" ng-show="employeeAddForm.firstName.$error.required">Required!</span>
+                            <span class="error" style="color:red" ng-show="employeeAddForm.firstName.$error.maxlength">First name must have maximum of 15 characters</span>
+                            <span class="error" style="color:red" ng-show="employeeAddForm.firstName.$error.minlength">First name must have atleast of 4 characters</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" name="lastName" id="lastName" class="form-control"
+                               ng-model="employee.lastName"
+                               placeholder="Last Name" required ng-maxlength="15" ng-minlength="4">
+
+                        <div class="error"
+                             ng-show="employeeAddForm.lastName.$dirty && employeeAddForm.lastName.$invalid">
+                            <span class="error" style="color:red" ng-show="employeeAddForm.lastName.$error.required">Required!</span>
+                            <span class="error" style="color:red" ng-show="employeeAddForm.lastName.$error.maxlength">Last name must have maximum of 15 characters</span>
+                            <span class="error" style="color:red" ng-show="employeeAddForm.lastName.$error.minlength">Last name must have atleast of 4 characters</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="departmentId">Department:</label>
+                        <select id="departmentId" ng-model="employee.departmentId" class="form-control" required
+                                ng-options="v as v.departmentName for v in departments">
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="manager">Manager:</label>
+                        <select id="manager" ng-model="employee.managerId" class="form-control" required
+                                ng-options="v as v.firstName+' '+ v.lastName for v in managers">
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="job">Job:</label>
+                        <select id="job" ng-model="employee.jobId" class="form-control" required
+                                ng-options="v as v.jobTitle+' salary:['+v.minSalary+':'+v.maxSalary+']' for v in jobs">
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="phoneNumber">Phone Number:</label>
+                        <input type="text" name="phoneNumber" id="phoneNumber" class="form-control"
+                               ng-model="employee.phoneNumber"
+                               placeholder="Phone Number" required ng-maxlength="14" ng-minlength="6">
+
+                        <div class="error"
+                             ng-show="employeeAddForm.phoneNumber.$dirty && employeeAddForm.phoneNumber.$invalid">
+                            <span class="error" style="color:red" ng-show="employeeAddForm.phoneNumber.$error.required">Required!</span>
+                            <span class="error" style="color:red"
+                                  ng-show="employeeAddForm.phoneNumber.$error.maxlength">Phone Number must have maximum of 15 characters</span>
+                            <span class="error" style="color:red"
+                                  ng-show="employeeAddForm.phoneNumber.$error.minlength">Phone Number must have atleast of 4 characters</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5"></div>
+                <div class="col-md-7">
+                    <div class="container">
+                        <button class="btn btn-default" ng-click="reset()">RESET</button>
+                        <button class="btn btn-default" ng-disabled="employeeAddForm.$invalid"
+                                ng-click="create(employee)">SAVE
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
