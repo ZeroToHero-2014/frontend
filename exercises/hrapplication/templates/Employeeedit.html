@@ -9,14 +9,22 @@
                 <div class="form-group">
                     <label for="firstName">First Name:</label>
                     <input type="text" id="firstName" class="form-control" ng-model="employee.firstName"
-                           placeholder="First Name" ng-required>
+                           placeholder="First Name" name="first" ng-minlength="4" ng-maxlength="15" ng-required>
+                    <div ng-show="employeeAddForm.first.$dirty">
+                        <span ng-show="employeeAddForm.first.$error.maxlength">Maxim 15 caractere</span>
+                        <span ng-show="employeeAddForm.first.$error.minlength">Minim 4 caractere</span>
+                    </div>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="form-group">
                     <label for="lastName">Last Name:</label>
                     <input type="text" id="lastName" class="form-control" ng-model="employee.lastName"
-                           placeholder="Last Name" required>
+                           placeholder="Last Name" name="last" ng-minlength="4" ng-maxlength="15" required>
+                    <div ng-show="employeeAddForm.last.$dirty">
+                        <span ng-show="employeeAddForm.last.$error.maxlength">Maxim 15 caractere</span>
+                        <span ng-show="employeeAddForm.last.$error.minlength">Minim 4 caractere</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -54,7 +62,11 @@ salary:['+v.minSalary+':'+v.maxSalary+']' for v in jobs">
                 <div class="form-group">
                     <label for="phoneNumber">Phone Number:</label>
                     <input type="text" id="phoneNumber" class="form-control" ng-model="employee.phoneNumber"
-                           placeholder="Phone Number" >
+                           placeholder="Phone Number" name="phone" ng-minlength="6" ng-maxlength="14">
+                    <div ng-show="employeeAddForm.phone.$dirty">
+                        <span ng-show="employeeAddForm.phone.$error.maxlength">Maxim 14 caractere</span>
+                        <span ng-show="employeeAddForm.phone.$error.minlength">Minim 6 caractere</span>
+                    </div>
                 </div>
             </div>
         </div>
