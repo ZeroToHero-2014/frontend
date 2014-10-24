@@ -1,3 +1,4 @@
+<div ng-show="show1">Nu am gasit alte informatii!</div>
 <table class="table table-bordered" ng-show="show">
     <tr>
         <th>ID</th>
@@ -11,28 +12,28 @@
     </tr>
     <tr>
         <td>
-            {{id}}
+            {{employee.employeeId}}
         </td>
        <td>
-            {{firstName}}
+            {{employee.firstName}}
         </td>
         <td>
-            {{lastName}}
+            {{employee.lastName}}
         </td>
         <td>
-            {{salary}}
+            {{employee.salary}}
         </td>
         <td>
-            {{departmentName}}
+            {{employee.departmentId.departmentName}}
         </td>
         <td>
-            {{email}}
+            {{employee.email}}
         </td>
         <td>
-            {{phone}}
+            {{employee.phoneNumber}}
         </td>
         <td>
-            {{city}}
+            {{employee.departmentId.locationId.city}}
         </td>
     </tr>
 </table>
