@@ -10,9 +10,14 @@
 </head>
 <body>
 <div ng-include="'templates/menu.html'"></div>
+<!-- in functie de ruta,  ne include un anumit template
+putem avea mai multe ng-incluse pe pagina-->
 
 
 <div ng-view></div>
+<!-- in functie de ruta,  ne include un anumit template
+putem avea un singur ng-view pe pagina-->
+
 
 <script type="text/javascript" src="bower_components/jquery/jquery.js"></script>
 <script type="text/javascript"  src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
@@ -23,5 +28,15 @@
 <script type="text/javascript" src="scripts/controllers/MainController.js"></script>
 <script type="text/javascript" src="scripts/controllers/MenuController.js"></script>
 <script type="text/javascript" src="scripts/controllers/ContactController.js"></script>
+<script type="text/javascript" src="scripts/controllers/ScopesController.js"></script>
+<script type="text/javascript" src="scripts/controllers/ChildScopeController.js"></script>
+<script type="text/javascript" src="scripts/controllers/DepartamentsListController.js"></script>
+<script type="text/javascript" src="scripts/controllers/DropDownController.js"></script>
+<script type="text/javascript" src="scripts/services/EmployeesService.js"></script>
+<script type="text/javascript" src="scripts/controllers/EmployeesListController.js"></script>
+<script type="text/javascript" src="scripts/controllers/EmployeeAddController.js"></script>
+
+
+
 </body>
 </html>

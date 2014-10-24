@@ -9,6 +9,34 @@ hrApp.config(['$routeProvider',
                 templateUrl: 'templates/contact.html',
                 controller: 'ContactController'
             })
+            .when('/twowaybinding', {
+                templateUrl: 'templates/scopes.html',
+                controller: 'ScopesController'
+            })
+            .when('/demomath', {
+                templateUrl: 'templates/scopes.html',
+                controller: 'ScopesController'
+            })
+            .when('/departmentslist', {
+                templateUrl: 'templates/departmentslist.html',
+                controller: 'DepartmentsListController'
+            })
+            .when('/dropdown', {
+                templateUrl: 'templates/dropdown.html',
+                controller: 'DropDownController'
+            })
+            .when('/employeeslist', {
+                templateUrl: 'templates/employeeslist.html',
+                controller: 'EmployeesListController'
+            })
+            .when('/employeeadd', {
+                templateUrl: 'templates/employeeadd.html',
+                controller: 'EmployeeAddController'
+            })
+            .when('/singleEmployee', {
+                templateUrl: 'templates/singleEmployee.html',
+                controller: 'EmployeesListController'
+            })
             .otherwise({
                 templateUrl: 'templates/main.html',
                 controller: 'MainController'
