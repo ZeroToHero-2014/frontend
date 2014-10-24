@@ -1,0 +1,4 @@
+<div ng-controller="EmployeeSelectController">
+    <select ng-model="selectedItem" ng-options="item.firstName for item in employees"></select>
+    <pre>{{selectedItem | json}}</pre>
+</div>
