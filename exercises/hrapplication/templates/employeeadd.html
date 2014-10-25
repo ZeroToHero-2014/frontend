@@ -8,22 +8,23 @@
                 <div class="col-lg-6">
                     <div class="form-group">
                         <label for="firstName">First Name:</label>
-                        <input type="text" id="firstName"
+                        <input type="text" id="firstName" name="firstName"
                                class="form-control" ng-model="employee.firstName"
-                               placeholder="First Name" required>
+                               placeholder="First Name" ng-minlength="4" ng-maxlength="15"  required>
+                        <span style="font-weight:bold; color:red" class="error" ng-show="employeeAddForm.firstName.$dirty && employeeAddForm.firstName.$error.required">Required!</span>
+                        <span style="font-weight:bold; color:red" class="error" ng-show="employeeAddForm.firstName.$dirty && employeeAddForm.firstName.$error.minlength">Min 4 chars!</span>
+                        <span style="font-weight:bold; color:red" class="error" ng-show="employeeAddForm.firstName.$dirty && employeeAddForm.firstName.$error.maxlength">Max 15 chars!</span>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="form-group">
                         <label for="lastName">Last Name:</label>
-                        <input type="text" id="lastName"
+                        <input type="text" id="lastName" name="lastName"
                                class="form-control" ng-model="employee.lastName"
-                               placeholder="Last Name" required minlength="4">
-                        <div ng-messages="employeeAddForm.lastName.$error" class="errors">
-                                <div ng-message="required">Required!</div>
-                                <div ng-message="minlength">Min 4 chars</div>
-                                <!-- <div ng-message="maxlength">Max 15 chars allowed</div> -->
-                        </div>
+                               placeholder="Last Name"  ng-minlength="4" ng-maxlength="15"  required />
+                        <span style="font-weight:bold; color:red" class="error" ng-show="employeeAddForm.lastName.$dirty && employeeAddForm.lastName.$error.required">Required!</span>
+                        <span style="font-weight:bold; color:red" class="error" ng-show="employeeAddForm.lastName.$dirty && employeeAddForm.lastName.$error.minlength">Min 4 chars!</span>
+                        <span style="font-weight:bold; color:red" class="error" ng-show="employeeAddForm.lastName.$dirty && employeeAddForm.lastName.$error.maxlength">Max 15 chars!</span>
                     </div>
                 </div>
             </div>
@@ -63,9 +64,12 @@ salary:['+v.minSalary+':'+v.maxSalary+']' for v in jobs">
                     <div class="form-group">
                         <label for="phoneNumber">Phone
                             Number:</label>
-                        <input type="text" id="phoneNumber"
+                        <input type="text" id="phoneNumber" name="phoneNumber"
                                class="form-control" ng-model="employee.phoneNumber"
-                               placeholder="Phone Number" required>
+                               placeholder="Phone Number" ng-minlength="6" ng-maxlength="14"  required>
+                        <span style="font-weight:bold; color:red" class="error" ng-show="employeeAddForm.phoneNumber.$dirty && employeeAddForm.phoneNumber.$error.required">Required!</span>
+                        <span style="font-weight:bold; color:red" class="error" ng-show="employeeAddForm.phoneNumber.$dirty && employeeAddForm.phoneNumber.$error.minlength">Min 6 chars!</span>
+                        <span style="font-weight:bold; color:red" class="error" ng-show="employeeAddForm.phoneNumber.$dirty && employeeAddForm.phoneNumber.$error.maxlength">Max 14 chars!</span>
                     </div>
                 </div>
             </div>
