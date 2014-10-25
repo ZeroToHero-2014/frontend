@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="hrApp">
+<head>
+    <meta charset="UTF-8">
+    <title>HR APP</title>
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap-theme.css"/>
+</head>
+<body>
+    <table class="table table-bordered">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>City</th>
+        </tr>
+        <tr ng-repeat="department in departments">
+            <td>
+                {{department.departmentId}}
+            </td>
+            <td>
+                {{department.departmentName}}
+            </td>
+            <td>
+                {{department.locationId.city}}
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

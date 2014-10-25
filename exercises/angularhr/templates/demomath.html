@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="hrApp">
+<head>
+    <meta charset="UTF-8">
+    <title>HR APP</title>
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap-theme.css"/>
+</head>
+<body>
+    <form ng-controller="DemomathController">
+        Number A: <input type="text" id="nrA"><br>
+        Number B: <input type="text" id="nrB"><br>
+        <input type="submit" value="Addition" ng-click="sumNumbers()">
+        <input type="submit" value="Absolute Subtraction" ng-click="substractNumbers()">
+        <input type="submit" value="Multiplication" ng-click="multiplicateNumbers()">
+        <input type="submit" value="Division" ng-click="divideNumbers()">
+        <div id="operation">
+
+        </div>
+    </form>
+</body>
+</html>

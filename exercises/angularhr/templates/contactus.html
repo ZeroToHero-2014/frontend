@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="hrApp">
+<head>
+    <meta charset="UTF-8">
+    <title>HR APP</title>
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap-theme.css"/>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron" ng-hide="descriptionShow">
+            <h1>{{title}}</h1>
+            <p class="lead">
+                Another simple demo application.
+            </p>
+            <p class="lead">
+                In this application we will use AngularJS framework.
+            </p>
+        </div>
+        <p>
+            <a href="#/contactus" role="button" ng-click="toggleDescriptionShow()">Show/Hide Excercise Description</a>
+        </p>
+    </div>
+</body>
+</html>

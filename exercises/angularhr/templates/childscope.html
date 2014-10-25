@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="hrApp">
+<head>
+    <meta charset="UTF-8">
+    <title>HR APP</title>
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap-theme.css"/>
+</head>
+<body>
+    <div ng-controller="ChildScopeController">
+        <p>
+            ScopeID: {{$id}}
+        </p>
+        <p>
+            Parent title is: {{title}}
+        </p>
+        <p>
+            <a class="btn btn-primary btn-lg" role="button" ng-click="setTitle()">Set Title</a>
+        </p>
+    </div>
+</body>
+</html>

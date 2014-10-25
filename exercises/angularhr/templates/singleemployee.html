@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div class="form-group">
+    <label>Employee:</label>
+    <select ng-model="employeeId" ng-options="v as v.firstName+' '+ v.lastName for v in employees">
+    </select>
+</div>
+    <table class="table table-bordered">
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Salary</th>
+            <th>Department Name</th>
+        </tr>
+        <tr >
+            <td>
+                {{employeeId.employeeId}}
+            </td>
+            <td>
+                {{employeeId.firstName}}
+            </td>
+            <td>
+                {{employeeId.lastName}}
+            </td>
+            <td>
+                {{employeeId.salary}}
+            </td>
+            <td>
+                {{employeeId.departmentId.departmentName}}
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
