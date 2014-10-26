@@ -1,0 +1,24 @@
+#firstName.ng-invalid.ng-dirty {
+
+    background-color: #ce8483;
+}
+#firstName.ng-valid.ng-dirty {
+
+    background-color: #afd9ee;
+}
+#lastName.ng-invalid.ng-dirty {
+
+    background-color: #ce8483;
+}
+#firstName.ng-valid.ng-dirty {
+
+    background-color:  #afd9ee;
+}
+#phoneNumber.ng-invalid.ng-dirty {
+
+    background-color: #ce8483;
+}
+#phoneNumber.ng-valid.ng-dirty {
+
+    background-color:  #afd9ee;
+}
