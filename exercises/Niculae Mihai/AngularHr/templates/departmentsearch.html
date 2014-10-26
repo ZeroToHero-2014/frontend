@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="jumbotron">
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Department Search</h3>
+            </div>
+            <div class="panel-body">
+
+                <input type="number" ng-model="id"/>
+                <p></p>
+                <a  class="btn btn-primary btn-lg" role="button" ng-click="Search(id)"> Search Department By Id </a>
+
+
+<p></p>
+
+
+                <dl class="dl-horizontal" ng-show="rez && data.departmentId !=undefined ">
+                    <dt>Id Deparatament </dt>
+                    <dd>{{data.departmentId}}</dd>
+                    <dt>Denumire</dt>
+                    <dd>{{data.departmentName}}</dd>
+                    <dt>Id Locatie</dt>
+                    <dd>{{data.locationId.locationId}}</dd>
+                    <dt>Oras</dt>
+                    <dd>{{data.locationId.city}}</dd>
+                    <dt>Cod Postal</dt>
+                    <dd>{{data.locationId.postalCode}}</dd>
+                    <dt>Stat</dt>
+                    <dd>{{data.locationId.stateProvince}}</dd>
+                    <dt>Adresa</dt>
+                    <dd>{{data.locationId.streetAddress}}</dd>
+                    </dl>
+
+
+                <div class="alert alert-warning" ng-show="pbformat">
+                    Problema la datele introduse (lipsesc sau contin caractere care nu sunt numerice) - Nu s-a efectuat cautarea!
+                </div>
+
+                <div class="alert alert-warning" ng-show="rez && data.departmentId ===undefined">
+                    Cautarea nu returneaza niciun rezultat!
+                </div>
+
+                <div class="alert alert-danger alert-error" ng-show="!rez && cau">
+                    <strong>Eroare!</strong> Problema la preluarea datelor (probabil datele introduse nu au un format corect sau sunt probleme la conectarea la sursa de date)!
+                </div>
+
+
+
+                </div>
+            </div></div></div>
