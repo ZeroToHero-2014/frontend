@@ -85,10 +85,25 @@
                 <div class="col-lg-6">
                     <div class="form-group">
                         <label for="phoneNumber">Phone Number:</label>
-                        <input type="text" id="phoneNumber" class="form-control" ng-model="employee.phoneNumber"
+                        <input type="text" name="phone" id="phoneNumber" class="form-control" ng-model="employee.phoneNumber"
                                placeholder="Phone Number" required ng-minlength="6" ng-maxlength="14">
                     </div>
 
+                    <div class="error"
+                         ng-show="employeeAddForm.phone.$dirty && employeeAddForm.phone.$invalid">
+                        <small class="error"
+                               ng-show="employeeAddForm.phone.$error.required">
+                            Your phone is required.
+                        </small>
+                        <small class="error"
+                               ng-show="employeeAddForm.phone.$error.minlength">
+                            Your phone is required to be at least 6 characters
+                        </small>
+                        <small class="error"
+                               ng-show="employeeAddForm.phone.$error.maxlength">
+                            Your phone cannot be longer than 14 characters
+                        </small>
+                    </div>
 
 
                 </div>
