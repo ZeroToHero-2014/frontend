@@ -15,7 +15,7 @@ hrApp.config(['$routeProvider',
                 controller: 'EmployeeViewController'
             })
             .when('/employeeedit/:employeeid', {
-                templateUrl: 'templates/Employeeedit.html',
+                templateUrl: 'templates/employeeedit.html',
                 controller: 'EmployeeEditController'
             })
             .when('/employeedelete/:employeeid', {

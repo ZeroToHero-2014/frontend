@@ -9,6 +9,7 @@
                     <div class="form-group">
                         <label for="firstName">First Name:</label>
                         <input type="text" id="firstName" class="form-control" ng-model="employee.firstName"
+                               ng-minlength="4" ng-maxlength="15"
                                placeholder="First Name" ng-required>
                     </div>
                 </div>
@@ -16,7 +17,9 @@
                     <div class="form-group">
                         <label for="lastName">Last Name:</label>
                         <input type="text" id="lastName" class="form-control" ng-model="employee.lastName"
+                               ng-minlength="4" ng-maxlength="15"
                                placeholder="Last Name" required>
+
                     </div>
                 </div>
             </div>
@@ -50,8 +53,8 @@
                 <div class="col-lg-6">
                     <div class="form-group">
                         <label for="phoneNumber">Phone Number:</label>
-                        <input type="text" id="phoneNumber" class="form-control" ng-model="employee.phoneNumber"
-                               placeholder="Phone Number" >
+                        <input type="number" id="phoneNumber" class="form-control" ng-model="employee.phoneNumber"
+                               ng-minlength="6" ng-maxlength="14"   placeholder="Phone Number" >
                     </div>
                 </div>
             </div>

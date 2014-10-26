@@ -15,6 +15,7 @@ hrApp.controller('EmployeeAddController', ['$scope', '$http', '$location', funct
         success(function (data) {
             $scope.jobs = data;
         });
+
     /**
      * Reset form
      */
