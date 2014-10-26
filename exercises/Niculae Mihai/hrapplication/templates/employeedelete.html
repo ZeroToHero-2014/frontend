@@ -1,0 +1,64 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">Add new employee</h2>
+    </div>
+    <div class="panel-body">
+        <div ng-form="employeeAddForm">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="firstName">First Name:</label>
+                        <p id="firstName" class="form-control-static">{{employee.firstName}}</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="lastName">Last Name:</label>
+                        <p id="lastName" class="form-control-static">{{employee.lastName}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="departmentId">Department:</label>
+                        <p id="departmentId" class="form-control-static">{{employee.departmentId.departmentName}}</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="manager">Manager:</label>
+                        <p id="manager" class="form-control-static">{{employee.managerId.firstName+' '+
+                            employee.managerId.lastName}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="job">Job:</label>
+                        <p id="job" class="form-control-
+static">{{employee.jobId.jobTitle+'
+                            salary:['+employee.jobId.minSalary+':'+employee.jobId.maxSalary+']'}}</p
+                                >
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="phoneNumber">Phone Number:</label>
+                        <p id="phoneNumber" class="form-control-
+static">{{employee.phoneNumber}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5"></div>
+            <div class="col-md-7">
+                <div class="container">
+                    <button class="btn btn-default" ng-click="deleteEmployee()">DELETE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
