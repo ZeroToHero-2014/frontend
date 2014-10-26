@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div class="container">
+    <div class="jumbotron">
+        <h1>{{title}}</h1>
+        <p>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Search department by ID</h3>
+            </div>
+            <div class="panel-body">
+                <p>
+                    Search Department by ID: <input type="number" ng-model="ID">
+                </p>
+                <p>
+                    Result: {{res}}
+                </p>
+                <p>
+                    <a class="btn btn-primary btn-lg" role="button" ng-click="search(ID)">Search</a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</div>
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>City</th>
+    </tr>
+    <tr ng-repeat="department in departments">
+        <td>
+            {{department.departmentId}}
+        </td>
+        <td>
+            {{department.departmentName}}
+        </td>
+        <td>
+            {{department.locationId.city}}
+        </td>
+    </tr>
+</table>
+</body>
+</html>

@@ -9,6 +9,10 @@ hrApp.config(['$routeProvider',
             templateUrl: 'templates/contact.html',
             controller: 'ContactController'
             })
+            .when('/departmentsearch', {
+                templateUrl: 'templates/departmentsearch.html',
+                controller: 'DepartmentSearchController'
+            })
             .when('/demomath', {
                 templateUrl: 'templates/demomath.html',
                 controller: 'DemoMathController'
@@ -16,6 +20,10 @@ hrApp.config(['$routeProvider',
             .when('/twowaybinding', {
                 templateUrl: 'templates/scopes.html',
                 controller: 'ScopesController'
+            })
+            .when('/departmentslist', {
+                templateUrl: 'templates/departmentslist.html',
+                controller: 'DepartmentsListController'
             })
             .otherwise({
                 templateUrl: 'templates/main.html',
