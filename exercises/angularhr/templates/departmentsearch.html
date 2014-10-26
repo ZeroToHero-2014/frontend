@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="jumbotron">
+        <p>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Department Search</h3>
+            </div>
+            <div class="panel-body">
+                <p>
+                    <input type="text"  ng-model="departmentId"
+                           placeholder="Introduceti un ID" ng-required>
+                 </p>
+                <h3 ng-show="eroare"> Introduceti un Id Valid
+                </h3>
+
+                <p>
+                    <button class="btn btn-primary btn-lg" role="button" ng-click="search()">Search Department By Id</button>
+                </p>
+
+               </div>
+        <table class="table table-bordered" ng-show="visible">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>City</th>
+            </tr>
+            <tr >
+                <td>
+                    {{departments.departmentId}}
+                </td>
+                <td>
+                    {{departments.departmentName}}
+                </td>
+                <td>
+                    {{departments.locationId.city}}
+                </td>
+            </tr>
+        </table>
+        </div>

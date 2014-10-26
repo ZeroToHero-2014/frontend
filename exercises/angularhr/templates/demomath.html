@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="jumbotron">
+        <h1>{{title}}</h1>
+        <p>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Demo Math</h3>
+            </div>
+            <div class="panel-body">
+                <p>
+                   Number A: <input type="number"  ng-model="firstVariable"/>
+                </p>
+                <p>
+                    Number B: <input type="number" ng-model="secondVariable"/>
+                </p>
+                <p>
+                Sum: <span id="math">{{firstVariable}}</span>
+                    +<span id="math">{{ secondVariable}}</span>
+                    =<span id="math">{{firstVariable + secondVariable}}</span>
+
+            </p>
+                <p>
+                    Substraction: <span id="math">{{firstVariable}}</span>
+                    -<span id="math">{{ secondVariable}}</span>
+                    =<span id="math">{{firstVariable - secondVariable}}</span>
+                </p>
+                <p>
+                    Multiplication: <span id="math">{{firstVariable}}</span>
+                    x<span id="math">{{ secondVariable}}</span>
+                    =<span id="math">{{firstVariable* secondVariable}}</span>
+                </p>
+                <p>
+                   Division: <span id="math">{{firstVariable}}</span>
+                    -<span id="math">{{ secondVariable}}</span>
+                    =<span id="math">{{firstVariable / secondVariable}}</span>
+                </p>
+
+
+            </div>
+        </div>

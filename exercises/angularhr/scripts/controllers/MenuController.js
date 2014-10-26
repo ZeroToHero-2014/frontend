@@ -12,6 +12,13 @@ hrApp.controller('MenuController', ['$scope' ,'employeeActionsService', function
         }
     ];
 
+    $scope.demomath = [
+        {
+            label: "Demo Math",
+            url: "#/demomath"
+        }
+    ];
+
     $scope.employeeActionList= employeeActionsService;   //injected service is employeeActionsService
 }]);
 

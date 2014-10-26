@@ -14,12 +14,16 @@ hrApp.config(['$routeProvider',
                 controller: 'ScopesController'
             })
             .when('/demomath', {
-                templateUrl: 'templates/scopes.html',
+                templateUrl: 'templates/demomath.html',
                 controller: 'ScopesController'
             })
             .when('/departmentslist', {
                 templateUrl: 'templates/departmentslist.html',
                 controller: 'DepartmentsListController'
+            })
+            .when('/departmentsearch', {
+                templateUrl: 'templates/departmentsearch.html',
+                controller: 'DepartmentSearchController'
             })
             .when('/dropdown', {
                 templateUrl: 'templates/dropdown.html',
