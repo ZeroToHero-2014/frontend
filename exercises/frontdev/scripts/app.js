@@ -30,7 +30,7 @@ var employeesList = [
     }
 ];
 function showList() {
-    var myTable = '<table border="1" class="table table-striped"><tr><th>First Name</th><th>Last Name</th><th>Phone</th><th>Salary</th></tr>';
+    var myTable = '<table border="1" class="table table-striped"><tr><th>First Name</th><th>Last Name</th><th>ID</th><th>Name</th>City</tr>';
     for(var i in employeesList) {
         myTable +=
             '<tr><td>'+employeesList[i].firstName+'</td><td>'+employeesList[i].lastName+'</td>' +

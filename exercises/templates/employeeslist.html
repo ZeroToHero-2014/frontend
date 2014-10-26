@@ -10,23 +10,24 @@
         <th>ID</th>
         <th>First Name</th>
         <th>Last Name</th>
-        <th>Salary</th>
         <th>Department Name</th>
+        <th>Actions</th>
     </tr>
-    <tr ng-repeat="controller in employee">
+    <tr ng-repeat="employee in employees | orderBy:'employeeId'">
         <td>
-            {{controller.employeeId}}
+            {{employee.employeeId}}
         </td>
         <td>
-            {{controller.firstName}} </td>
-        <td>
-            {{controller.lastName}}
+            {{employee.firstName}}
         </td>
         <td>
-            {{controller.salary}}
+            {{employee.lastName}}
         </td>
         <td>
-            {{controller.departmentId.departmentName}}
+            {{employee.departmentId.departmentName}}
+        </td>
+        <td>
+            <button type="button" class="btn btn-default" ng-click="viewEmployee(employee.employeeId)">View</button>
         </td>
     </tr>
 </table>

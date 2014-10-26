@@ -5,7 +5,83 @@
     <title></title>
 </head>
 <body>
-<table class="table table-bordered">
+<div class="container">
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="employeeId">Name:</label>
+                    <select id="employeeId"  class="form-control"
+                        ng-model="employeeselect" ng-click="EmployySe()"
+                        ng-options="employee as employee.firstName+' '+employee.lastName for employee in employees">
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="panel-body">
+            <div ng-form="employeeAddForm">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label for="ID">ID:</label>
+                            <p id="ID" class="form-control-static">{{employeeselect.employeeId}}</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label for="phoneNumber">City:</label>
+                            <p id="City" class="form-control-static">{{employeeselect.departmentId.locationId.city}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label for="firstName">First Name:</label>
+                            <p id="firstName" class="form-control-static">{{employeeselect.firstName}}</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label for="lastName">Last Name:</label>
+                            <p id="lastName" class="form-control-static">{{employeeselect.lastName}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label for="departmentId">Department:</label>
+                            <p id="departmentId" class="form-control-static">{{employeeselect.departmentId.departmentName}}</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label for="manager">Salary:</label>
+                            <p id="manager" class="form-control-static">{{employeeselect.salary}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label for="job">Email:</label>
+                            <p id="job" class="form-control-static">{{employeeselect.email}}</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label for="phoneNumber">Phone Number:</label>
+                            <p id="phoneNumber" class="form-control-static">{{employeeselect.phoneNumber}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!--<table class="table table-bordered">
     <tr>
         <th>ID</th>
         <th>First Name</th>
@@ -13,22 +89,23 @@
         <th>Salary</th>
         <th>Department Name</th>
     </tr>
-    <tr ng-repeat="controller in employee">
+    <tr>
         <td>
-            {{controller.employeeId}}
+            {{employeeselect.employeeId}}
         </td>
         <td>
-            {{controller.firstName}} </td>
+            {{employeeselect.firstName}} </td>
         <td>
-            {{controller.lastName}}
+            {{employeeselect.lastName}}
         </td>
         <td>
-            {{controller.salary}}
+            {{employeeselect.salary}}
         </td>
         <td>
-            {{controller.departmentId.departmentName}}
+            {{employeeselect.departmentId.departmentName}}
         </td>
     </tr>
-</table>
+</table>-->
+
 </body>
 </html>

@@ -14,6 +14,20 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="form-group">
+                        <label for="ID">ID:</label>
+                        <p id="ID" class="form-control-static">{{employee.employeeId}}</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="phoneNumber">City:</label>
+                        <p id="City" class="form-control-static">{{employee.departmentId.locationId.city}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
                         <label for="firstName">First Name:</label>
                         <p id="firstName" class="form-control-static">{{employee.firstName}}</p>
                     </div>
@@ -34,18 +48,16 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="form-group">
-                        <label for="manager">Manager:</label>
-                        <p id="manager" class="form-control-static">{{employee.managerId.firstName+' '+
-                            employee.managerId.lastName}}</p>
+                        <label for="manager">Salary:</label>
+                        <p id="manager" class="form-control-static">{{employee.salary}}</p>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-6">
                     <div class="form-group">
-                        <label for="job">Job:</label>
-                        <p id="job" class="form-control-static">{{employee.jobId.jobTitle+'salary:['+employee.jobId.minSalary+':'
-                            +employee.jobId.maxSalary+']'}}</p>
+                        <label for="job">Email:</label>
+                        <p id="job" class="form-control-static">{{employee.email}}</p>
                     </div>
                 </div>
                 <div class="col-lg-6">

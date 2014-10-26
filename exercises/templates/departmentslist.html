@@ -8,18 +8,26 @@
 <table class="table table-bordered">
     <tr>
         <th>ID</th>
-        <th>Name</th>
-        <th>City</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Department Name</th>
+        <th>Actions</th>
     </tr>
-    <tr ng-repeat="department in departments">
+    <tr ng-repeat="employee in employees | orderBy:'employeeId'">
         <td>
-            {{department.departmentId}}
+            {{employee.employeeId}}
         </td>
         <td>
-            {{department.departmentName}}
+            {{employee.firstName}}
         </td>
         <td>
-            {{department.locationId.city}}
+            {{employee.lastName}}
+        </td>
+        <td>
+            {{employee.departmentId.departmentName}}
+        </td>
+        <td>
+            <button type="button" class="btn btn-default" ng-click="viewEmployee(employee.employeeId)">View</button>
         </td>
     </tr>
 </table>

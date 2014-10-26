@@ -35,6 +35,9 @@ hrApp.controller('EmployeeAddController', ['$scope', '$http', function
             method: 'PUT',data:addEmployee}).
             success(function (data) {
                 $scope.employee = data;
+            }).
+            error(function (data, status, headers, config) {
+                $scope.de = "Error.Please Try again!";
             });
     }
 }]);
