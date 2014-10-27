@@ -1,0 +1,21 @@
+<div class="panel-body">
+    <p>
+        <select ng-model="SingleEmployee" ng-options="single.FirstName for single in employee">
+        </select>
+    </p>
+    <p>
+        ID :{{employee.employeeId}}
+    </p>
+    <p>
+        First Name : {{employee.firstName}}
+    </p>
+    <p>
+        Last Name : {{employee.lastName}}
+    </p>
+    <p>
+       Salary :  {{employee.salary}}
+    </p>
+    <p>
+       Department :  {{employee.departmentId.departmentName}}
+    </p>
+</div>

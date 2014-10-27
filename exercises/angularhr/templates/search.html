@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="jumbotron">
+        <h1>{{title}}</h1>
+        <p>
+        <div class="panel panel-default">
+        <div class="panel-heading">
+           <h3 class="panel-title">Cauta departamentul dupa ID:</h3>
+        </div>
+        <div class="panel-body">
+           <p>
+        Type ID: <input type="text" ng-model="department"/>
+           </p>
+            </div>
+            <p>
+            <a class="btn btn-primary btn-lg" role="button" ng-click="getdepartament(department)">Search Department by ID</a>
+    </p>
+            <p>{{result}}</p>
+            <p>{{message}}</p>
+
+    </div>
+    </div>
+    </div>
+</div>

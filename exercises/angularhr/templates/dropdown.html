@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="jumbotron">
+        <h1>{{title}}</h1>
+        <p>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Simple array example</h3>
+            </div>
+            <div class="panel-body">
+                <p>
+                    <select ng-model="selectedCity" ng-options="city for city in cities">
+                    </select>
+                </p>
+                <p>
+                    Selected Key: {{selectedCity}}
+                </p>
+            </div>
+            <div class="panel-heading">
+                <h3 class="panel-title">Array of objects example</h3>
+            </div>
+            <div class="panel-body">
+                <p>
+                    <select ng-model="selectedCar" ng-options="car.label for car in cars">
+                    </select>
+                </p>
+                <p>
+                    Selected Car: {{selectedCar}}
+                </p>
+                <p>
+                    Selected Car ID: {{selectedCar.id}}
+                </p>
+                <p>
+                    Selected Car Label: {{selectedCar.label}}
+                </p>
+            </div>
+        </div>
+        </p>
+    </div>
+</div>
