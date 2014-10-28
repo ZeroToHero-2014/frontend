@@ -3,6 +3,7 @@
  */
 hrApp.controller('DepartmentSearchController', ['$scope', '$http', function($scope, $http){
     $scope.department='';
+    $scope.err=false;
 
     $scope.search = function(){
         $http({url: 'http://demo.teamnet.ro:8282/datamodel/departments/findOne/' + $scope.inputValue, method: 'GET'}).
@@ -13,8 +14,9 @@ hrApp.controller('DepartmentSearchController', ['$scope', '$http', function($sco
                 else
                     $scope.result = "Success!";
 
-                    }).
+                }).
                 error(function(data, status, headers, config) {
+                    $scope.err = true;
                 });
     }
 }]);

@@ -1,3 +1,9 @@
+
+
+<p ng-show="err">
+    <b> Error! Information could not be saved.</b>
+</p>
+
 <div class="container">
     <div class="jumbotron">
         <h1>{{title}}</h1>
@@ -17,6 +23,10 @@
                     <a class="btn btn-primary btn-lg" role="button" ng-click="search()">Search</a>
                 </p>
             </div>
+
+        <p ng-show="err">
+            <b>Eroare!</b>
+        </p>
         </div>
         </p>
     </div>
