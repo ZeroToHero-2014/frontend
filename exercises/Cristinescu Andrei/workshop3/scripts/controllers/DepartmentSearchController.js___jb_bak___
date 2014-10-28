@@ -12,11 +12,7 @@ hrApp.controller('DepartmentSearchController', ['$scope', '$http', function($sco
 
                 if(data == "null"){
                     $scope.eroareNull = "It`s not found";
-                    console.log("Am intrat aici");
-
                 }
-
-
             }).
             error(function(data, status, headers, config) {
                 $scope.eroare = "The deparatament does not exist!";
