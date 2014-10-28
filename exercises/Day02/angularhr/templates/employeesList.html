@@ -1,10 +1,52 @@
 <table class="table table-bordered">
+
+    <tr ng-show="showInfo">
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Salary</th>
+        <th>Department Name</th>
+        <th>email</th>
+        <th>Phone Number</th>
+        <th>Department city</th>
+    </tr>
+    <tr ng-show="showInfo">
+        <td>
+            {{employee.employeeId}}
+        </td>
+        <td>
+            {{employee.firstName}}
+        </td>
+        <td>
+            {{employee.lastName}}
+        </td>
+        <td>
+            {{employee.salary}}
+        </td>
+        <td>
+            {{employee.departmentId.departmentName}}
+        </td>
+        <td>
+            {{employee.email}}
+        </td>
+        <td>
+            {{employee.phoneNumber}}
+        </td>
+        <td>
+            {{employee.departmentId.locationId.city}}
+        </td>
+    </tr>
+</table>
+
+
+<table class="table table-bordered">
     <tr>
         <th>ID</th>
         <th>First Name</th>
         <th>Last Name</th>
         <th>Salary</th>
         <th>Department Name</th>
+        <th>Action</th>
     </tr>
     <tr ng-repeat="employee in employees">
         <td>
@@ -21,6 +63,11 @@
         </td>
         <td>
             {{employee.departmentId.departmentName}}
+        </td>
+        <td>
+            <p>
+            <a class="btn btn-primary btn-lg" role="button" ng-click="viewInformation(employee)">View Informations</a>
+            </p>
         </td>
     </tr>
 </table>

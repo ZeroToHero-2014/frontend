@@ -5,7 +5,7 @@
                 <div class="form-group">
                     <label for="employee.nume">Employees:</label>
                     <select id="employee.nume" ng-model="selectedEmployee" class="form-control" ng-required
-                            ng-click="searchEmployee()"
+                            ng-change="searchEmployee()"
                             ng-options="v as v.firstName + ' ' + v.lastName for v in employees">
                     </select>
                 </div>
@@ -13,9 +13,6 @@
         </div>
         <!-- cine e employeeId din for, id si cum fac legatura cu controller -->
 
-        <p>
-            Result: {{employee}}
-        </p>
 
         <table class="table table-bordered">
             <tr>
@@ -27,19 +24,19 @@
             </tr>
             <tr>
                 <td>
-                    {{selectedEmployee.employeeId}}
+                    {{employee.employeeId}}
                 </td>
                 <td>
-                    {{selectedEmployee.firstName}}
+                    {{employee.firstName}}
                 </td>
                 <td>
-                    {{selectedEmployee.lastName}}
+                    {{employee.lastName}}
                 </td>
                 <td>
-                    {{selectedEmployee.salary}}
+                    {{employee.salary}}
                 </td>
                 <td>
-                    {{selectedEmployee.departmentId.departmentName}}
+                    {{employee.departmentId.departmentName}}
                 </td>
             </tr>
         </table>

@@ -3,16 +3,18 @@
  */
 hrApp.controller('EmployeeSelectController', ['$scope', '$http', function ($scope, $http) {
     $scope.employees = []
-    $scope.selectedEmployee = {}
+    $scope.selectedEmployee = ''
+    $scope.employee='';
     $http({url: 'http://demo.teamnet.ro:8282/datamodel/employees/findAll', method: 'GET'}).
         success(function (data) {
             $scope.employees = data;
         });
 
     $scope.searchEmployee = function(){
-    $http({url: 'http://demo.teamnet.ro:8282/datamodel/employees/create/findOne/' + $scope.selectedEmployee.employeeId, method: 'GET'}).
-        success(function (data) {
-            $scope.selectedEmployee = data;
-        });
+        $http({url: 'http://demo.teamnet.ro:8282/datamodel/employees/findOne/' + $scope.selectedEmployee.employeeId, method: 'GET'}).
+            success(function (data) {
+                $scope.employee = data;
+            });
     }
 }]);
+
