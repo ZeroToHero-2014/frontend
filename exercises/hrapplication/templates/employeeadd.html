@@ -3,7 +3,7 @@
         <h2 class="panel-title">Add new employee</h2>
     </div>
     <div class="panel-body">
-        <div ng-form="employeeAddForm">
+        <div ng-form="employeeAddForm" class="error">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="form-group">
@@ -11,6 +11,7 @@
                         <input type="text" id="firstName" class="form-control" ng-model="employee.firstName"
                                ng-minlength="4" ng-maxlength="15"
                                placeholder="First Name" required>
+                      <!-- <span class="error" ng-show="myForm.input.$error.required">Required!</span><br>-->
                     </div>
                 </div>
                 <div class="col-lg-6">

@@ -1,0 +1,19 @@
+
+
+/*.form-control {
+    -webkit-transition:all linear 0.5s;
+    transition:all linear 0.5s;
+    background: transparent;
+}
+.form-control.ng-invalid.ng-dirty {
+    background: red;
+}*/
+
+.error input.ng-invalid.ng-dirty {
+
+    /*background-color: #FA787E;*/
+}
+
+.error input.ng-valid.ng-dirty {
+    background-color: #78FA89;
+}
