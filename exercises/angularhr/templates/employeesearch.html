@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="jumbotron">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Date Angajat</h3>
+            </div>
+            <div class="panel-body">
+
+
+                <div ng-show="!eroare">
+                    <label for="Id">Angajat</label>
+                    <select id="Id"  ng-model="selectedEmploy" class="form-control" ng-options=" v as v.firstName + ' ' + v.lastName for v in employees" />
+                    <p></p>
+                    <a class="btn btn-primary btn-lg" role="button" ng-click="preluareExtern(selectedEmploy.employeeId)"> Detalii Angajat  </a> <p> </p>
+
+                    <dl class="dl-horizontal" ng-show="afiseaza ">
+                        <dt>Id Angajat </dt>
+                        <dd>{{id}}</dd>
+                        <dt>Prenume</dt>
+                        <dd>{{prenume}}</dd>
+                        <dt>Nume de familie</dt>
+                        <dd>{{numeF}}</dd>
+                        <dt>Salariu</dt>
+                        <dd>{{salariu}}</dd>
+                        <dt>Departament</dt>
+                        <dd>{{departament}}</dd>
+
+                    </dl>
+
+
+
+                </div>
+
+                <div class="alert alert-danger alert-error" ng-show="eroare">
+                    <strong>Eroare!</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

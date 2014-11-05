@@ -1,0 +1,32 @@
+<div class="container">
+    <p><label>Type id:</label></p>
+    <p>
+    <input type="text" ng-model="id"/>
+    </p>
+    <a class="btn btn-primary btn-lg" role="button" ng-click="search(id)">Search department by id</a>
+
+    <div ng-show="gasit">
+    <table class="table table-bordered" >
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>City</th>
+        </tr>
+        <tr>
+            <td>
+                {{department.departmentId}}
+            </td>
+            <td>
+                {{department.departmentName}}
+            </td>
+            <td>
+                {{department.locationId.city}}
+            </td>
+        </tr>
+    </table>
+
+</div>
+    <div class="alert alert-danger alert-error" ng-show="!gasit && ok">
+    Nu a fost gasit departamentul cu id-ul introdus.
+    </div>
+</div>

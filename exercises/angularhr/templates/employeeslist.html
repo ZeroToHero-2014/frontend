@@ -1,0 +1,50 @@
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Salary</th>
+        <th>Department Name</th>
+        <th>Actions</th>
+    </tr>
+    <tr ng-repeat="employee in employees">
+        <td>
+            {{employee.employeeId}}
+        </td>
+        <td>
+            {{employee.firstName}}
+        </td>
+        <td>
+            {{employee.lastName}}
+        </td>
+        <td>
+            {{employee.salary}}
+        </td>
+        <td>
+            {{employee.departmentId.departmentName}}
+        </td>
+        <td>
+            <button class="btn btn-default"  ng-click="cauta(employee.employeeId)">Details</button>
+
+        </td>
+
+        <dl class="dl-horizontal"  ng-show="detalii===true" >
+        <dt>ID </dt>
+        <dd>{{angajat.employeeId}}</dd>
+        <dt>First Name</dt>
+        <dd>{{angajat.firstName}}</dd>
+        <dt>Last Name</dt>
+        <dd>{{angajat.lastName}}</dd>
+        <dt>Salary</dt>
+        <dd>{{angajat.salary}}</dd>
+        <dt>Departament Name</dt>
+        <dd>{{angajat.departmentId.departmentName}}</dd>
+        <dt>email</dt>
+        <dd>{{angajat.email}}</dd>
+        <dt>Phone Number</dt>
+        <dd>{{angajat.phoneNumber}}</dd>
+        <dt>Departament City</dt>
+        <dd>{{angajat.departmentId.locationId.city}}</dd>
+
+        </dl>
+</table>

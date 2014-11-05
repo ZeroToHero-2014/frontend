@@ -1,0 +1,65 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'grunt-cli' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.32
+4 verbose node symlink C:\Program Files\nodejs\\node.exe
+5 verbose cache add [ 'grunt-cli', null ]
+6 verbose cache add name=undefined spec="grunt-cli" args=["grunt-cli",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'grunt-cli',
+7 verbose parsed url   path: 'grunt-cli',
+7 verbose parsed url   href: 'grunt-cli' }
+8 silly lockFile 671ef8ac-grunt-cli grunt-cli
+9 verbose lock grunt-cli C:\Users\Alice\AppData\Roaming\npm-cache\671ef8ac-grunt-cli.lock
+10 silly lockFile 671ef8ac-grunt-cli grunt-cli
+11 silly lockFile 671ef8ac-grunt-cli grunt-cli
+12 verbose addNamed [ 'grunt-cli', '' ]
+13 verbose addNamed [ null, '*' ]
+14 silly lockFile d63f3d0b-grunt-cli grunt-cli@
+15 verbose lock grunt-cli@ C:\Users\Alice\AppData\Roaming\npm-cache\d63f3d0b-grunt-cli.lock
+16 silly addNameRange { name: 'grunt-cli', range: '*', hasData: false }
+17 verbose request where is /grunt-cli
+18 verbose request registry https://registry.npmjs.org/
+19 verbose request id 9a0ada8bef6105d6
+20 verbose url raw /grunt-cli
+21 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-cli' ]
+22 verbose url resolved https://registry.npmjs.org/grunt-cli
+23 verbose request where is https://registry.npmjs.org/grunt-cli
+24 info trying registry request attempt 1 at 21:13:04
+25 http GET https://registry.npmjs.org/grunt-cli
+26 info retry will retry, error on last attempt: Error: connect ETIMEDOUT
+27 info trying registry request attempt 2 at 21:13:35
+28 http GET https://registry.npmjs.org/grunt-cli
+29 info retry will retry, error on last attempt: Error: connect ETIMEDOUT
+30 info trying registry request attempt 3 at 21:14:56
+31 http GET https://registry.npmjs.org/grunt-cli
+32 silly lockFile d63f3d0b-grunt-cli grunt-cli@
+33 silly lockFile d63f3d0b-grunt-cli grunt-cli@
+34 error network connect ETIMEDOUT
+34 error network This is most likely not a problem with npm itself
+34 error network and is related to network connectivity.
+34 error network In most cases you are behind a proxy or have bad network settings.
+34 error network
+34 error network If you are behind a proxy, please make sure that the
+34 error network 'proxy' config is set properly.  See: 'npm help config'
+35 error System Windows_NT 6.1.7601
+36 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "-g" "grunt-cli"
+37 error cwd e:\all\angularhr
+38 error node -v v0.10.32
+39 error npm -v 1.4.28
+40 error syscall connect
+41 error code ETIMEDOUT
+42 error errno ETIMEDOUT
+43 verbose exit [ 1, true ]
