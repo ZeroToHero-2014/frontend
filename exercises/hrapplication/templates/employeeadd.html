@@ -5,16 +5,24 @@
             <div class="col-lg-6">
                 <div class="form-group">
                     <label for="firstName">First Name:</label>
-                    <input type="text" id="firstName" class="form-control" ng-model="employee.firstName"
-                           placeholder="First Name" required>
+                    <input type="text" id="firstName" name="firstN" class="form-control" ng-model="employee.firstName"
+                           placeholder="First Name" ng-required ng-maxlength="15" ng-minlength="4">
                 </div>
+                <div  class="alert alert-danger alert-error" ng-show="employeeAddForm.firstN.$error.minlength && employeeAddForm.firstN.$invalid && employeeAddForm.firstN.$dirty">
+                    The first name should have at least 4 characters!   </div>
+                <div  class="alert alert-danger alert-error" ng-show="employeeAddForm.firstN.$error.maxlength && employeeAddForm.firstN.$invalid && employeeAddForm.firstN.$dirty">
+                    The first name should have at most 15 characters!   </div>
             </div>
             <div class="col-lg-6">
                 <div class="form-group">
                     <label for="lastName">Last Name:</label>
-                    <input type="text" id="lastName" class="form-control" ng-model="employee.lastName"
-                           placeholder="Last Name" required>
+                    <input type="text" name="lastN" id="lastName" class="form-control" ng-model="employee.lastName" placeholder="Last Name" required ng-maxlength="15" ng-minlength="4">
                 </div>
+                <div  class="alert alert-danger alert-error" ng-show="employeeAddForm.lastN.$error.minlength && employeeAddForm.lastN.$invalid && employeeAddForm.lastN.$dirty">
+                    The last name should have at least 4 characters!   </div>
+
+                <div  class="alert alert-danger alert-error" ng-show="employeeAddForm.lastN.$error.maxlength && employeeAddForm.lastN.$invalid && employeeAddForm.lastN.$dirty">
+                    The last name should have at most 15 characters!   </div>
             </div>
         </div>
             <div class="row">
@@ -50,9 +58,14 @@ v.lastName for v in managers"> </select>
                     <div class="form-group">
                         <label for="phoneNumber">Phone
                             Number:</label>
-                        <input type="text" id="phoneNumber" class="form-control" ng-model="employee.phoneNumber"
-                               placeholder="Phone Number" required>
+                        <input type="text" name="phone" id="phoneNumber" class="form-control" ng-model="employee.phoneNumber"    placeholder="Phone Number" ng-maxlength="14" ng-minlength="6" >
                     </div>
+                    <div  class="alert alert-danger alert-error" ng-show="employeeAddForm.phone.$error.minlength && employeeAddForm.phone.$invalid && employeeAddForm.phone.$dirty">
+                        The last name should have at least 6 characters!   </div>
+
+                    <div  class="alert alert-danger alert-error" ng-show="employeeAddForm.phone.$error.maxlength && employeeAddForm.phone.$invalid && employeeAddForm.phone.$dirty">
+                        The last name should have at most 14 characters!   </div>
+
                 </div>
             </div>
             <div class="row">
@@ -62,6 +75,7 @@ v.lastName for v in managers"> </select>
                         <button class="btn btn-default" ng-click="reset()">RESET</button>
                         <button class="btn btn-default" ng-disabled="employeeAddForm.$invalid" ng-click=" create(employee)">SAVE</button>
                     </div>
+                </div>
                 </div>
             </div>
         </div>

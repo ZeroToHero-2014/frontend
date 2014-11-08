@@ -22,7 +22,8 @@ hrApp.controller('EmployeeAddController', ['$scope', '$http',
          * @param addEmployee - employee to be persisted
          */
 
-        $scope.create = function (addEmployee) {$http({url: 'http://demo.teamnet.ro:8282/datamodel/employees/create', method:'PUT',data:addEmployee}).success(function (data) {
+        $scope.create = function (addEmployee) {$http({url: 'http://demo.teamnet.ro:8282/datamodel/employees/create',
+            method:'PUT',data:addEmployee}).success(function (data) {
             $scope.employee = data;
 
             $location.url('/employeeview/'+$scope.employee.employeeId);
